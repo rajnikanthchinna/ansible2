@@ -1,0 +1,631 @@
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ubuntu@ec2-52-221-191-130.ap-southeast-1.compute.amazonaws.com
+The authenticity of host 'ec2-52-221-191-130.ap-southeast-1.compute.amazonaws.com (52.221.191.130)' can't be established.
+ECDSA key fingerprint is SHA256:wldednrlEFfdTtBSxGEVwtEjqd96fK1mfc8XSxRLR6g.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-52-221-191-130.ap-southeast-1.compute.amazonaws.com,52.221.191.130' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Oct  6 05:45:34 UTC 2018
+
+  System load: 0.0               Memory usage: 5%   Processes:       81
+  Usage of /:  10.2% of 7.74GB   Swap usage:   0%   Users logged in: 0
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+ubuntu@ip-172-31-26-2:~$ sudo -i
+root@ip-172-31-26-2:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources [422 kB]
+Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources [6,322 B]
+Get:4 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources [213 kB]
+Get:5 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources [7,435 B]
+Get:6 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages [1,106 kB]
+Get:7 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.2 kB]
+Get:8 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages [492 kB]
+Get:9 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.6 kB]
+Get:10 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en [551 kB]
+Get:11 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en [7,616 B]
+Get:12 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en [4,021 B]
+Get:13 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en [262 kB]
+Get:14 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources [9,709 B]
+Get:15 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+Get:16 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources [35.4 kB]
+Get:17 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources [1,896 B]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Get:18 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:19 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:20 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:21 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:22 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Get:23 http://security.ubuntu.com trusty-security/main Sources [163 kB]
+Get:24 http://security.ubuntu.com trusty-security/universe Sources [84.2 kB]
+Get:25 http://security.ubuntu.com trusty-security/main amd64 Packages [771 kB]
+Get:26 http://security.ubuntu.com trusty-security/universe amd64 Packages [262 kB]
+Get:27 http://security.ubuntu.com trusty-security/main Translation-en [415 kB]
+Get:28 http://security.ubuntu.com trusty-security/universe Translation-en [141 kB]
+Fetched 12.8 MB in 4s (2,591 kB/s)
+Reading package lists... Done
+root@ip-172-31-26-2:~# sudo apt-get install software-properties-common
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+software-properties-common is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 21 not upgraded.
+root@ip-172-31-26-2:~# sudo apt-add-repository ppa:ansible/ansible
+ Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy. Avoid writing scripts or custom code to deploy and update your applications— automate in a language that approaches plain English, using SSH, with no agents to install on remote systems.
+
+http://ansible.com/
+ More info: https://launchpad.net/~ansible/+archive/ubuntu/ansible
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+gpg: keyring `/tmp/tmpxdvxw49f/secring.gpg' created
+gpg: keyring `/tmp/tmpxdvxw49f/pubring.gpg' created
+gpg: requesting key 7BB9C367 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpxdvxw49f/trustdb.gpg: trustdb created
+gpg: key 7BB9C367: public key "Launchpad PPA for Ansible, Inc." imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+root@ip-172-31-26-2:~# sudo apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Hit http://security.ubuntu.com trusty-security InRelease
+Get:1 http://ppa.launchpad.net trusty InRelease [15.9 kB]
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Get:2 http://ppa.launchpad.net trusty/main amd64 Packages [509 B]
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Get:3 http://ppa.launchpad.net trusty/main Translation-en [326 B]
+Fetched 16.8 kB in 2s (7,144 B/s)
+Reading package lists... Done
+root@ip-172-31-26-2:~# sudo apt-get install ansible
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  libgmp10 python-crypto python-httplib2 python-jinja2 python-markupsafe
+  python-paramiko python-setuptools sshpass
+Suggested packages:
+  python-crypto-dbg python-crypto-doc python-jinja2-doc
+The following NEW packages will be installed:
+  ansible libgmp10 python-crypto python-httplib2 python-jinja2
+  python-markupsafe python-paramiko python-setuptools sshpass
+0 upgraded, 9 newly installed, 0 to remove and 21 not upgraded.
+Need to get 4,912 kB of archives.
+After this operation, 38.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libgmp10 amd64 2:5.1.3+dfsg-1ubuntu1 [218 kB]
+Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main python-markupsafe amd64 0.18-1build2 [14.3 kB]
+Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main python-jinja2 all 2.7.2-2 [161 kB]
+Get:4 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main python-crypto amd64 2.6.1-4ubuntu0.3 [239 kB]
+Get:5 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main python-paramiko all 1.10.1-1git1ubuntu0.1 [106 kB]
+Get:6 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main python-httplib2 all 0.8-2build1 [35.4 kB]
+Get:7 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main python-setuptools all 3.3-1ubuntu2 [230 kB]
+Get:8 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/universe sshpass amd64 1.05-1 [10.5 kB]
+Get:9 http://ppa.launchpad.net/ansible/ansible/ubuntu/ trusty/main ansible all 2.7.0-1ppa~trusty [3,898 kB]
+Fetched 4,912 kB in 9s (537 kB/s)
+Selecting previously unselected package libgmp10:amd64.
+(Reading database ... 51306 files and directories currently installed.)
+Preparing to unpack .../libgmp10_2%3a5.1.3+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+Selecting previously unselected package python-markupsafe.
+Preparing to unpack .../python-markupsafe_0.18-1build2_amd64.deb ...
+Unpacking python-markupsafe (0.18-1build2) ...
+Selecting previously unselected package python-jinja2.
+Preparing to unpack .../python-jinja2_2.7.2-2_all.deb ...
+Unpacking python-jinja2 (2.7.2-2) ...
+Selecting previously unselected package python-crypto.
+Preparing to unpack .../python-crypto_2.6.1-4ubuntu0.3_amd64.deb ...
+Unpacking python-crypto (2.6.1-4ubuntu0.3) ...
+Selecting previously unselected package python-paramiko.
+Preparing to unpack .../python-paramiko_1.10.1-1git1ubuntu0.1_all.deb ...
+Unpacking python-paramiko (1.10.1-1git1ubuntu0.1) ...
+Selecting previously unselected package python-httplib2.
+Preparing to unpack .../python-httplib2_0.8-2build1_all.deb ...
+Unpacking python-httplib2 (0.8-2build1) ...
+Selecting previously unselected package python-setuptools.
+Preparing to unpack .../python-setuptools_3.3-1ubuntu2_all.deb ...
+Unpacking python-setuptools (3.3-1ubuntu2) ...
+Selecting previously unselected package sshpass.
+Preparing to unpack .../sshpass_1.05-1_amd64.deb ...
+Unpacking sshpass (1.05-1) ...
+Selecting previously unselected package ansible.
+Preparing to unpack .../ansible_2.7.0-1ppa~trusty_all.deb ...
+Unpacking ansible (2.7.0-1ppa~trusty) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+Setting up python-markupsafe (0.18-1build2) ...
+Setting up python-jinja2 (2.7.2-2) ...
+Setting up python-crypto (2.6.1-4ubuntu0.3) ...
+Setting up python-paramiko (1.10.1-1git1ubuntu0.1) ...
+Setting up python-httplib2 (0.8-2build1) ...
+Setting up python-setuptools (3.3-1ubuntu2) ...
+Setting up sshpass (1.05-1) ...
+Setting up ansible (2.7.0-1ppa~trusty) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.14) ...
+root@ip-172-31-26-2:~# adduser dhoni
+Adding user `dhoni' ...
+Adding new group `dhoni' (1001) ...
+Adding new user `dhoni' (1001) with group `dhoni' ...
+Creating home directory `/home/dhoni' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+Changing the user information for dhoni
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+root@ip-172-31-26-2:~#
+root@ip-172-31-26-2:~# visudo
+root@ip-172-31-26-2:~# vi /etc/ssh/sshd_config
+root@ip-172-31-26-2:~# service ssh restart
+ssh stop/waiting
+ssh start/running, process 2084
+root@ip-172-31-26-2:~# su dhoni
+dhoni@ip-172-31-26-2:/root$ cd
+dhoni@ip-172-31-26-2:~$ ssh 172.31.20.115
+The authenticity of host '172.31.20.115 (172.31.20.115)' can't be established.
+ECDSA key fingerprint is 22:66:dc:1a:44:32:22:45:36:6f:d7:26:d7:4a:4c:06.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '172.31.20.115' (ECDSA) to the list of known hosts.
+dhoni@172.31.20.115's password:
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Oct  6 05:51:25 UTC 2018
+
+  System load:  0.0               Processes:           97
+  Usage of /:   10.2% of 7.74GB   Users logged in:     0
+  Memory usage: 5%                IP address for eth0: 172.31.20.115
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+New release '16.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+dhoni@ip-172-31-20-115:~$ exit
+logout
+Connection to 172.31.20.115 closed.
+dhoni@ip-172-31-26-2:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/dhoni/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/dhoni/.ssh/id_rsa.
+Your public key has been saved in /home/dhoni/.ssh/id_rsa.pub.
+The key fingerprint is:
+39:d0:96:2c:ac:28:3a:48:64:de:70:54:6a:1a:f9:ec dhoni@ip-172-31-26-2
+The key's randomart image is:
++--[ RSA 2048]----+
+|   ...           |
+|  o .. o .       |
+| * +  + =        |
+|+ X. . + .       |
+|.+.+.   S        |
+|+..      .       |
+|+  E             |
+| .               |
+|                 |
++-----------------+
+dhoni@ip-172-31-26-2:~$ ssh-copy-id 172.31.20.115
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+dhoni@172.31.20.115's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh '172.31.20.115'"
+and check to make sure that only the key(s) you wanted were added.
+
+dhoni@ip-172-31-26-2:~$ ssh 172.31.20.115
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Oct  6 05:57:04 UTC 2018
+
+  System load:  0.04              Processes:           102
+  Usage of /:   10.7% of 7.74GB   Users logged in:     1
+  Memory usage: 6%                IP address for eth0: 172.31.20.115
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+New release '16.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sat Oct  6 05:56:10 2018 from ip-172-31-26-2.ap-southeast-1.compute.internal
+dhoni@ip-172-31-20-115:~$ exit
+logout
+Connection to 172.31.20.115 closed.
+dhoni@ip-172-31-26-2:~$ exit
+exit
+root@ip-172-31-26-2:~# apt-get install git
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 21 not upgraded.
+Need to get 3,394 kB of archives.
+After this operation, 22.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.8 [701 kB]
+Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.8 [2,672 kB]
+Fetched 3,394 kB in 0s (40.1 MB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 55326 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
+Unpacking liberror-perl (0.17-1.1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.8_all.deb ...
+Unpacking git-man (1:1.9.1-1ubuntu0.8) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.8_amd64.deb ...
+Unpacking git (1:1.9.1-1ubuntu0.8) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up liberror-perl (0.17-1.1) ...
+Setting up git-man (1:1.9.1-1ubuntu0.8) ...
+Setting up git (1:1.9.1-1ubuntu0.8) ...
+root@ip-172-31-26-2:~# su dhoni
+dhoni@ip-172-31-26-2:/root$ cd
+dhoni@ip-172-31-26-2:~$ git clone
+You must specify a repository to clone.
+
+usage: git clone [options] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recursive           initialize submodules in the clone
+    --recurse-submodules  initialize submodules in the clone
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --single-branch       clone only one branch, HEAD or --branch
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+
+dhoni@ip-172-31-26-2:~$ git clone https://github.com/rajnikanthchinna/ansible.git
+Cloning into 'ansible'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 16 (delta 4), reused 14 (delta 2), pack-reused 0
+Unpacking objects: 100% (16/16), done.
+Checking connectivity... done.
+dhoni@ip-172-31-26-2:~$ ls
+ansible
+dhoni@ip-172-31-26-2:~$ cd ansible
+dhoni@ip-172-31-26-2:~/ansible$ ls
+myhosts  myping.yml  ping.yml  README.md
+dhoni@ip-172-31-26-2:~/ansible$ ls
+myhosts  myping.yml  ping.yml  README.md
+dhoni@ip-172-31-26-2:~/ansible$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/rajnikanthchinna/ansible
+   84d5346..198745f  master     -> origin/master
+Updating 84d5346..198745f
+Fast-forward
+ myhosts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dhoni@ip-172-31-26-2:~/ansible$ ansible-playbook -i myhosts myping.yml
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [172.31.20.115]
+
+TASK [ping all nodes] **********************************************************
+ok: [172.31.20.115]
+
+TASK [my install git] **********************************************************
+fatal: [172.31.20.115]: FAILED! => {"cache_update_time": 1538805114, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"     install 'git'' failed: E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)\nE: Unable to lock the administration directory (/var/lib/dpkg/), are you root?\n", "rc": 100, "stderr": "E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)\nE: Unable to lock the administration directory (/var/lib/dpkg/), are you root?\n", "stderr_lines": ["E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)", "E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?"], "stdout": "", "stdout_lines": []}
+        to retry, use: --limit @/home/dhoni/ansible/myping.retry
+
+PLAY RECAP *********************************************************************
+172.31.20.115              : ok=2    changed=0    unreachable=0    failed=1
+
+dhoni@ip-172-31-26-2:~/ansible$ ansible-playbook -i myhosts myping.yml
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [172.31.20.115]
+
+TASK [ping all nodes] **********************************************************
+ok: [172.31.20.115]
+
+TASK [my install git] **********************************************************
+fatal: [172.31.20.115]: FAILED! => {"cache_update_time": 1538805114, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"     install 'git'' failed: E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)\nE: Unable to lock the administration directory (/var/lib/dpkg/), are you root?\n", "rc": 100, "stderr": "E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)\nE: Unable to lock the administration directory (/var/lib/dpkg/), are you root?\n", "stderr_lines": ["E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)", "E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?"], "stdout": "", "stdout_lines": []}
+        to retry, use: --limit @/home/dhoni/ansible/myping.retry
+
+PLAY RECAP *********************************************************************
+172.31.20.115              : ok=2    changed=0    unreachable=0    failed=1
+
+dhoni@ip-172-31-26-2:~/ansible$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/rajnikanthchinna/ansible
+   198745f..63249a1  master     -> origin/master
+Updating 198745f..63249a1
+Fast-forward
+ myping.yml | 1 +
+ 1 file changed, 1 insertion(+)
+dhoni@ip-172-31-26-2:~/ansible$ ansible-playbook -i myhosts myping.yml
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [172.31.20.115]
+
+TASK [ping all nodes] **********************************************************
+ok: [172.31.20.115]
+
+TASK [my install git] **********************************************************
+changed: [172.31.20.115]
+
+PLAY RECAP *********************************************************************
+172.31.20.115              : ok=3    changed=1    unreachable=0    failed=0
+
+dhoni@ip-172-31-26-2:~/ansible$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/rajnikanthchinna/ansible
+   63249a1..96d0438  master     -> origin/master
+Updating 63249a1..96d0438
+Fast-forward
+ chinna.yml | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ create mode 100644 chinna.yml
+dhoni@ip-172-31-26-2:~/ansible$ ansible-playbook -i myhosts chinna.yml
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [172.31.20.115]
+
+TASK [ping all nodes] **********************************************************
+ok: [172.31.20.115]
+
+TASK [my install apache2] ******************************************************
+changed: [172.31.20.115]
+
+PLAY RECAP *********************************************************************
+172.31.20.115              : ok=3    changed=1    unreachable=0    failed=0
+
+dhoni@ip-172-31-26-2:~/ansible$ Connection reset by 52.221.191.130 port 22
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ubuntu@ec2-52-221-191-130.ap-southeast-1.compute.amazonaws.com
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Oct  6 05:46:53 UTC 2018
+
+  System load:  0.3               Processes:           99
+  Usage of /:   10.2% of 7.74GB   Users logged in:     0
+  Memory usage: 5%                IP address for eth0: 172.31.26.2
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+New release '16.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sat Oct  6 05:46:55 2018 from 60.243.162.71
+ubuntu@ip-172-31-26-2:~$ sudo -i
+root@ip-172-31-26-2:~# su dhoni
+dhoni@ip-172-31-26-2:/root$ cd
+dhoni@ip-172-31-26-2:~$ ls
+ansible
+dhoni@ip-172-31-26-2:~$ cd ansible
+dhoni@ip-172-31-26-2:~/ansible$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/rajnikanthchinna/ansible
+   96d0438..40939e9  master     -> origin/master
+Updating 96d0438..40939e9
+Fast-forward
+ multi.yml | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 multi.yml
+dhoni@ip-172-31-26-2:~/ansible$ ansible-playbook -i myhosts multi.yml
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [172.31.20.115]
+
+TASK [install git tree wget] ***************************************************
+[DEPRECATION WARNING]: Invoking "apt" only once while using a loop via
+squash_actions is deprecated. Instead of using a loop to supply multiple items
+and specifying `name: {{item}}`, please use `name: [u'git', u'tree', u'wget']`
+and remove the loop. This feature will be removed in version 2.11. Deprecation
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+changed: [172.31.20.115] => (item=[u'git', u'tree', u'wget'])
+
+PLAY RECAP *********************************************************************
+172.31.20.115              : ok=2    changed=1    unreachable=0    failed=0
+
+dhoni@ip-172-31-26-2:~/ansible$ ansible-playbook -i myhosts multi.yml
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [172.31.20.115]
+
+TASK [install git tree wget] ***************************************************
+[DEPRECATION WARNING]: Invoking "apt" only once while using a loop via
+squash_actions is deprecated. Instead of using a loop to supply multiple items
+and specifying `name: {{item}}`, please use `name: [u'git', u'tree', u'wget']`
+and remove the loop. This feature will be removed in version 2.11. Deprecation
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+ok: [172.31.20.115] => (item=[u'git', u'tree', u'wget'])
+
+PLAY RECAP *********************************************************************
+172.31.20.115              : ok=2    changed=0    unreachable=0    failed=0
+
+dhoni@ip-172-31-26-2:~/ansible$

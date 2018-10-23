@@ -1,0 +1,766 @@
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ec2-user@ec2-13-250-46-64.ap-southeast-1.compute.amazonaws.com
+Last login: Mon Oct  8 06:45:02 2018 from 157.48.142.48
+[ec2-user@ip-172-31-18-146 ~]$ sudo -i
+[root@ip-172-31-18-146 ~]# yum update
+Loaded plugins: amazon-id, rhui-lb, search-disabled-repos
+rhui-REGION-client-config-server-7                       | 2.9 kB     00:00
+rhui-REGION-rhel-server-releases                         | 3.5 kB     00:00
+rhui-REGION-rhel-server-rh-common                        | 3.8 kB     00:00
+(1/7): rhui-REGION-client-config-server-7/x86_64/primary_d | 2.5 kB   00:00
+(2/7): rhui-REGION-rhel-server-releases/7Server/x86_64/gro | 855 kB   00:00
+(3/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/gr |  104 B   00:00
+(4/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/pr | 122 kB   00:00
+(5/7): rhui-REGION-rhel-server-rh-common/7Server/x86_64/up |  34 kB   00:00
+(6/7): rhui-REGION-rhel-server-releases/7Server/x86_64/upd | 2.8 MB   00:00
+(7/7): rhui-REGION-rhel-server-releases/7Server/x86_64/pri |  56 MB   00:01
+Resolving Dependencies
+--> Running transaction check
+---> Package NetworkManager.x86_64 1:1.10.2-13.el7 will be updated
+---> Package NetworkManager.x86_64 1:1.10.2-16.el7_5 will be an update
+---> Package NetworkManager-config-server.noarch 1:1.10.2-13.el7 will be updated
+---> Package NetworkManager-config-server.noarch 1:1.10.2-16.el7_5 will be an update
+---> Package NetworkManager-libnm.x86_64 1:1.10.2-13.el7 will be updated
+---> Package NetworkManager-libnm.x86_64 1:1.10.2-16.el7_5 will be an update
+---> Package NetworkManager-team.x86_64 1:1.10.2-13.el7 will be updated
+---> Package NetworkManager-team.x86_64 1:1.10.2-16.el7_5 will be an update
+---> Package NetworkManager-tui.x86_64 1:1.10.2-13.el7 will be updated
+---> Package NetworkManager-tui.x86_64 1:1.10.2-16.el7_5 will be an update
+---> Package audit.x86_64 0:2.8.1-3.el7 will be updated
+---> Package audit.x86_64 0:2.8.1-3.el7_5.1 will be an update
+---> Package audit-libs.x86_64 0:2.8.1-3.el7 will be updated
+---> Package audit-libs.x86_64 0:2.8.1-3.el7_5.1 will be an update
+---> Package audit-libs-python.x86_64 0:2.8.1-3.el7 will be updated
+---> Package audit-libs-python.x86_64 0:2.8.1-3.el7_5.1 will be an update
+---> Package bind-libs-lite.x86_64 32:9.9.4-61.el7 will be updated
+---> Package bind-libs-lite.x86_64 32:9.9.4-61.el7_5.1 will be an update
+---> Package bind-license.noarch 32:9.9.4-61.el7 will be updated
+---> Package bind-license.noarch 32:9.9.4-61.el7_5.1 will be an update
+---> Package binutils.x86_64 0:2.27-27.base.el7 will be updated
+---> Package binutils.x86_64 0:2.27-28.base.el7_5.1 will be an update
+---> Package ca-certificates.noarch 0:2017.2.20-71.el7 will be updated
+---> Package ca-certificates.noarch 0:2018.2.22-70.0.el7_5 will be an update
+---> Package cloud-init.x86_64 0:0.7.9-24.el7 will be updated
+---> Package cloud-init.x86_64 0:0.7.9-24.el7_5.1 will be an update
+---> Package dhclient.x86_64 12:4.2.5-68.el7 will be updated
+---> Package dhclient.x86_64 12:4.2.5-68.el7_5.1 will be an update
+---> Package dhcp-common.x86_64 12:4.2.5-68.el7 will be updated
+---> Package dhcp-common.x86_64 12:4.2.5-68.el7_5.1 will be an update
+---> Package dhcp-libs.x86_64 12:4.2.5-68.el7 will be updated
+---> Package dhcp-libs.x86_64 12:4.2.5-68.el7_5.1 will be an update
+---> Package dracut.x86_64 0:033-535.el7 will be updated
+---> Package dracut.x86_64 0:033-535.el7_5.1 will be an update
+---> Package dracut-config-generic.x86_64 0:033-535.el7 will be updated
+---> Package dracut-config-generic.x86_64 0:033-535.el7_5.1 will be an update
+---> Package dracut-config-rescue.x86_64 0:033-535.el7 will be updated
+---> Package dracut-config-rescue.x86_64 0:033-535.el7_5.1 will be an update
+---> Package dracut-network.x86_64 0:033-535.el7 will be updated
+---> Package dracut-network.x86_64 0:033-535.el7_5.1 will be an update
+---> Package e2fsprogs.x86_64 0:1.42.9-11.el7 will be updated
+---> Package e2fsprogs.x86_64 0:1.42.9-12.el7_5 will be an update
+---> Package e2fsprogs-libs.x86_64 0:1.42.9-11.el7 will be updated
+---> Package e2fsprogs-libs.x86_64 0:1.42.9-12.el7_5 will be an update
+---> Package gnupg2.x86_64 0:2.0.22-4.el7 will be updated
+---> Package gnupg2.x86_64 0:2.0.22-5.el7_5 will be an update
+---> Package initscripts.x86_64 0:9.49.41-1.el7 will be updated
+---> Package initscripts.x86_64 0:9.49.41-1.el7_5.2 will be an update
+---> Package iptables.x86_64 0:1.4.21-24.el7 will be updated
+---> Package iptables.x86_64 0:1.4.21-24.1.el7_5 will be an update
+---> Package iwl7265-firmware.noarch 0:22.0.7.0-62.el7 will be updated
+---> Package iwl7265-firmware.noarch 0:22.0.7.0-62.2.el7_5 will be an update
+---> Package kernel.x86_64 0:3.10.0-862.14.4.el7 will be installed
+--> Processing Dependency: linux-firmware >= 20180113-61 for package: kernel-3.10.0-862.14.4.el7.x86_64
+---> Package kernel-tools.x86_64 0:3.10.0-862.el7 will be updated
+---> Package kernel-tools.x86_64 0:3.10.0-862.14.4.el7 will be an update
+---> Package kernel-tools-libs.x86_64 0:3.10.0-862.el7 will be updated
+---> Package kernel-tools-libs.x86_64 0:3.10.0-862.14.4.el7 will be an update
+---> Package kexec-tools.x86_64 0:2.0.15-13.el7 will be updated
+---> Package kexec-tools.x86_64 0:2.0.15-13.el7_5.2 will be an update
+---> Package kpartx.x86_64 0:0.4.9-119.el7 will be updated
+---> Package kpartx.x86_64 0:0.4.9-119.el7_5.1 will be an update
+---> Package krb5-libs.x86_64 0:1.15.1-18.el7 will be updated
+---> Package krb5-libs.x86_64 0:1.15.1-19.el7 will be an update
+---> Package libblkid.x86_64 0:2.23.2-52.el7 will be updated
+---> Package libblkid.x86_64 0:2.23.2-52.el7_5.1 will be an update
+---> Package libcom_err.x86_64 0:1.42.9-11.el7 will be updated
+---> Package libcom_err.x86_64 0:1.42.9-12.el7_5 will be an update
+---> Package libgcc.x86_64 0:4.8.5-28.el7 will be updated
+---> Package libgcc.x86_64 0:4.8.5-28.el7_5.1 will be an update
+---> Package libgomp.x86_64 0:4.8.5-28.el7 will be updated
+---> Package libgomp.x86_64 0:4.8.5-28.el7_5.1 will be an update
+---> Package libgudev1.x86_64 0:219-57.el7 will be updated
+---> Package libgudev1.x86_64 0:219-57.el7_5.3 will be an update
+---> Package libmount.x86_64 0:2.23.2-52.el7 will be updated
+---> Package libmount.x86_64 0:2.23.2-52.el7_5.1 will be an update
+---> Package libss.x86_64 0:1.42.9-11.el7 will be updated
+---> Package libss.x86_64 0:1.42.9-12.el7_5 will be an update
+---> Package libstdc++.x86_64 0:4.8.5-28.el7 will be updated
+---> Package libstdc++.x86_64 0:4.8.5-28.el7_5.1 will be an update
+---> Package libuuid.x86_64 0:2.23.2-52.el7 will be updated
+---> Package libuuid.x86_64 0:2.23.2-52.el7_5.1 will be an update
+---> Package mariadb-libs.x86_64 1:5.5.56-2.el7 will be updated
+---> Package mariadb-libs.x86_64 1:5.5.60-1.el7_5 will be an update
+---> Package microcode_ctl.x86_64 2:2.1-29.el7 will be updated
+---> Package microcode_ctl.x86_64 2:2.1-29.16.el7_5 will be an update
+---> Package nspr.x86_64 0:4.17.0-1.el7 will be updated
+---> Package nspr.x86_64 0:4.19.0-1.el7_5 will be an update
+---> Package nss.x86_64 0:3.34.0-4.el7 will be updated
+---> Package nss.x86_64 0:3.36.0-7.el7_5 will be an update
+---> Package nss-softokn.x86_64 0:3.34.0-2.el7 will be updated
+---> Package nss-softokn.x86_64 0:3.36.0-5.el7_5 will be an update
+---> Package nss-softokn-freebl.x86_64 0:3.34.0-2.el7 will be updated
+---> Package nss-softokn-freebl.x86_64 0:3.36.0-5.el7_5 will be an update
+---> Package nss-sysinit.x86_64 0:3.34.0-4.el7 will be updated
+---> Package nss-sysinit.x86_64 0:3.36.0-7.el7_5 will be an update
+---> Package nss-tools.x86_64 0:3.34.0-4.el7 will be updated
+---> Package nss-tools.x86_64 0:3.36.0-7.el7_5 will be an update
+---> Package nss-util.x86_64 0:3.34.0-2.el7 will be updated
+---> Package nss-util.x86_64 0:3.36.0-1.el7_5 will be an update
+---> Package openldap.x86_64 0:2.4.44-13.el7 will be updated
+---> Package openldap.x86_64 0:2.4.44-15.el7_5 will be an update
+---> Package procps-ng.x86_64 0:3.3.10-17.el7 will be updated
+---> Package procps-ng.x86_64 0:3.3.10-17.el7_5.2 will be an update
+---> Package python.x86_64 0:2.7.5-68.el7 will be updated
+---> Package python.x86_64 0:2.7.5-69.el7_5 will be an update
+---> Package python-libs.x86_64 0:2.7.5-68.el7 will be updated
+---> Package python-libs.x86_64 0:2.7.5-69.el7_5 will be an update
+---> Package python-perf.x86_64 0:3.10.0-862.el7 will be updated
+---> Package python-perf.x86_64 0:3.10.0-862.14.4.el7 will be an update
+---> Package qemu-guest-agent.x86_64 10:2.8.0-2.el7 will be updated
+---> Package qemu-guest-agent.x86_64 10:2.8.0-2.el7_5.1 will be an update
+---> Package rsyslog.x86_64 0:8.24.0-16.el7 will be updated
+---> Package rsyslog.x86_64 0:8.24.0-16.el7_5.4 will be an update
+---> Package selinux-policy.noarch 0:3.13.1-192.el7 will be updated
+---> Package selinux-policy.noarch 0:3.13.1-192.el7_5.6 will be an update
+---> Package selinux-policy-targeted.noarch 0:3.13.1-192.el7 will be updated
+---> Package selinux-policy-targeted.noarch 0:3.13.1-192.el7_5.6 will be an update
+---> Package subscription-manager.x86_64 0:1.20.10-1.el7 will be updated
+---> Package subscription-manager.x86_64 0:1.20.11-1.el7_5 will be an update
+---> Package subscription-manager-rhsm.x86_64 0:1.20.10-1.el7 will be updated
+---> Package subscription-manager-rhsm.x86_64 0:1.20.11-1.el7_5 will be an update
+---> Package subscription-manager-rhsm-certificates.x86_64 0:1.20.10-1.el7 will be updated
+---> Package subscription-manager-rhsm-certificates.x86_64 0:1.20.11-1.el7_5 will be an update
+---> Package sudo.x86_64 0:1.8.19p2-13.el7 will be updated
+---> Package sudo.x86_64 0:1.8.19p2-14.el7_5 will be an update
+---> Package systemd.x86_64 0:219-57.el7 will be updated
+---> Package systemd.x86_64 0:219-57.el7_5.3 will be an update
+---> Package systemd-libs.x86_64 0:219-57.el7 will be updated
+---> Package systemd-libs.x86_64 0:219-57.el7_5.3 will be an update
+---> Package systemd-sysv.x86_64 0:219-57.el7 will be updated
+---> Package systemd-sysv.x86_64 0:219-57.el7_5.3 will be an update
+---> Package tuned.noarch 0:2.9.0-1.el7 will be updated
+---> Package tuned.noarch 0:2.9.0-1.el7_5.2 will be an update
+---> Package tzdata.noarch 0:2018c-1.el7 will be updated
+---> Package tzdata.noarch 0:2018e-3.el7 will be an update
+---> Package util-linux.x86_64 0:2.23.2-52.el7 will be updated
+---> Package util-linux.x86_64 0:2.23.2-52.el7_5.1 will be an update
+---> Package yum-utils.noarch 0:1.1.31-45.el7 will be updated
+---> Package yum-utils.noarch 0:1.1.31-46.el7_5 will be an update
+--> Running transaction check
+---> Package linux-firmware.noarch 0:20180220-62.2.git6d51311.el7_5 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package      Arch   Version             Repository                        Size
+================================================================================
+Installing:
+ kernel       x86_64 3.10.0-862.14.4.el7 rhui-REGION-rhel-server-releases  46 M
+Updating:
+ NetworkManager
+              x86_64 1:1.10.2-16.el7_5   rhui-REGION-rhel-server-releases 1.7 M
+ NetworkManager-config-server
+              noarch 1:1.10.2-16.el7_5   rhui-REGION-rhel-server-releases 143 k
+ NetworkManager-libnm
+              x86_64 1:1.10.2-16.el7_5   rhui-REGION-rhel-server-releases 1.3 M
+ NetworkManager-team
+              x86_64 1:1.10.2-16.el7_5   rhui-REGION-rhel-server-releases 161 k
+ NetworkManager-tui
+              x86_64 1:1.10.2-16.el7_5   rhui-REGION-rhel-server-releases 235 k
+ audit        x86_64 2.8.1-3.el7_5.1     rhui-REGION-rhel-server-releases 247 k
+ audit-libs   x86_64 2.8.1-3.el7_5.1     rhui-REGION-rhel-server-releases  99 k
+ audit-libs-python
+              x86_64 2.8.1-3.el7_5.1     rhui-REGION-rhel-server-releases  76 k
+ bind-libs-lite
+              x86_64 32:9.9.4-61.el7_5.1 rhui-REGION-rhel-server-releases 734 k
+ bind-license noarch 32:9.9.4-61.el7_5.1 rhui-REGION-rhel-server-releases  85 k
+ binutils     x86_64 2.27-28.base.el7_5.1
+                                         rhui-REGION-rhel-server-releases 5.9 M
+ ca-certificates
+              noarch 2018.2.22-70.0.el7_5
+                                         rhui-REGION-rhel-server-releases 392 k
+ cloud-init   x86_64 0.7.9-24.el7_5.1    rhui-REGION-rhel-server-releases 630 k
+ dhclient     x86_64 12:4.2.5-68.el7_5.1 rhui-REGION-rhel-server-releases 284 k
+ dhcp-common  x86_64 12:4.2.5-68.el7_5.1 rhui-REGION-rhel-server-releases 175 k
+ dhcp-libs    x86_64 12:4.2.5-68.el7_5.1 rhui-REGION-rhel-server-releases 131 k
+ dracut       x86_64 033-535.el7_5.1     rhui-REGION-rhel-server-releases 325 k
+ dracut-config-generic
+              x86_64 033-535.el7_5.1     rhui-REGION-rhel-server-releases  56 k
+ dracut-config-rescue
+              x86_64 033-535.el7_5.1     rhui-REGION-rhel-server-releases  58 k
+ dracut-network
+              x86_64 033-535.el7_5.1     rhui-REGION-rhel-server-releases 100 k
+ e2fsprogs    x86_64 1.42.9-12.el7_5     rhui-REGION-rhel-server-releases 699 k
+ e2fsprogs-libs
+              x86_64 1.42.9-12.el7_5     rhui-REGION-rhel-server-releases 167 k
+ gnupg2       x86_64 2.0.22-5.el7_5      rhui-REGION-rhel-server-releases 1.5 M
+ initscripts  x86_64 9.49.41-1.el7_5.2   rhui-REGION-rhel-server-releases 438 k
+ iptables     x86_64 1.4.21-24.1.el7_5   rhui-REGION-rhel-server-releases 432 k
+ iwl7265-firmware
+              noarch 22.0.7.0-62.2.el7_5 rhui-REGION-rhel-server-releases 5.5 M
+ kernel-tools x86_64 3.10.0-862.14.4.el7 rhui-REGION-rhel-server-releases 6.3 M
+ kernel-tools-libs
+              x86_64 3.10.0-862.14.4.el7 rhui-REGION-rhel-server-releases 6.2 M
+ kexec-tools  x86_64 2.0.15-13.el7_5.2   rhui-REGION-rhel-server-releases 341 k
+ kpartx       x86_64 0.4.9-119.el7_5.1   rhui-REGION-rhel-server-releases  76 k
+ krb5-libs    x86_64 1.15.1-19.el7       rhui-REGION-rhel-server-releases 748 k
+ libblkid     x86_64 2.23.2-52.el7_5.1   rhui-REGION-rhel-server-releases 178 k
+ libcom_err   x86_64 1.42.9-12.el7_5     rhui-REGION-rhel-server-releases  41 k
+ libgcc       x86_64 4.8.5-28.el7_5.1    rhui-REGION-rhel-server-releases 101 k
+ libgomp      x86_64 4.8.5-28.el7_5.1    rhui-REGION-rhel-server-releases 156 k
+ libgudev1    x86_64 219-57.el7_5.3      rhui-REGION-rhel-server-releases  92 k
+ libmount     x86_64 2.23.2-52.el7_5.1   rhui-REGION-rhel-server-releases 180 k
+ libss        x86_64 1.42.9-12.el7_5     rhui-REGION-rhel-server-releases  46 k
+ libstdc++    x86_64 4.8.5-28.el7_5.1    rhui-REGION-rhel-server-releases 304 k
+ libuuid      x86_64 2.23.2-52.el7_5.1   rhui-REGION-rhel-server-releases  81 k
+ mariadb-libs x86_64 1:5.5.60-1.el7_5    rhui-REGION-rhel-server-releases 758 k
+ microcode_ctl
+              x86_64 2:2.1-29.16.el7_5   rhui-REGION-rhel-server-releases 1.4 M
+ nspr         x86_64 4.19.0-1.el7_5      rhui-REGION-rhel-server-releases 127 k
+ nss          x86_64 3.36.0-7.el7_5      rhui-REGION-rhel-server-releases 835 k
+ nss-softokn  x86_64 3.36.0-5.el7_5      rhui-REGION-rhel-server-releases 315 k
+ nss-softokn-freebl
+              x86_64 3.36.0-5.el7_5      rhui-REGION-rhel-server-releases 222 k
+ nss-sysinit  x86_64 3.36.0-7.el7_5      rhui-REGION-rhel-server-releases  62 k
+ nss-tools    x86_64 3.36.0-7.el7_5      rhui-REGION-rhel-server-releases 515 k
+ nss-util     x86_64 3.36.0-1.el7_5      rhui-REGION-rhel-server-releases  78 k
+ openldap     x86_64 2.4.44-15.el7_5     rhui-REGION-rhel-server-releases 355 k
+ procps-ng    x86_64 3.3.10-17.el7_5.2   rhui-REGION-rhel-server-releases 290 k
+ python       x86_64 2.7.5-69.el7_5      rhui-REGION-rhel-server-releases  93 k
+ python-libs  x86_64 2.7.5-69.el7_5      rhui-REGION-rhel-server-releases 5.6 M
+ python-perf  x86_64 3.10.0-862.14.4.el7 rhui-REGION-rhel-server-releases 6.3 M
+ qemu-guest-agent
+              x86_64 10:2.8.0-2.el7_5.1  rhui-REGION-rhel-server-releases 150 k
+ rsyslog      x86_64 8.24.0-16.el7_5.4   rhui-REGION-rhel-server-releases 607 k
+ selinux-policy
+              noarch 3.13.1-192.el7_5.6  rhui-REGION-rhel-server-releases 453 k
+ selinux-policy-targeted
+              noarch 3.13.1-192.el7_5.6  rhui-REGION-rhel-server-releases 6.6 M
+ subscription-manager
+              x86_64 1.20.11-1.el7_5     rhui-REGION-rhel-server-releases 993 k
+ subscription-manager-rhsm
+              x86_64 1.20.11-1.el7_5     rhui-REGION-rhel-server-releases 285 k
+ subscription-manager-rhsm-certificates
+              x86_64 1.20.11-1.el7_5     rhui-REGION-rhel-server-releases 200 k
+ sudo         x86_64 1.8.19p2-14.el7_5   rhui-REGION-rhel-server-releases 1.1 M
+ systemd      x86_64 219-57.el7_5.3      rhui-REGION-rhel-server-releases 5.0 M
+ systemd-libs x86_64 219-57.el7_5.3      rhui-REGION-rhel-server-releases 402 k
+ systemd-sysv x86_64 219-57.el7_5.3      rhui-REGION-rhel-server-releases  80 k
+ tuned        noarch 2.9.0-1.el7_5.2     rhui-REGION-rhel-server-releases 244 k
+ tzdata       noarch 2018e-3.el7         rhui-REGION-rhel-server-releases 482 k
+ util-linux   x86_64 2.23.2-52.el7_5.1   rhui-REGION-rhel-server-releases 2.0 M
+ yum-utils    noarch 1.1.31-46.el7_5     rhui-REGION-rhel-server-releases 120 k
+Installing for dependencies:
+ linux-firmware
+              noarch 20180220-62.2.git6d51311.el7_5
+                                         rhui-REGION-rhel-server-releases  57 M
+
+Transaction Summary
+================================================================================
+Install   1 Package  (+1 Dependent package)
+Upgrade  69 Packages
+
+Total download size: 175 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/71): NetworkManager-config-server-1.10.2-16.el7_5.noarc | 143 kB   00:00
+(2/71): NetworkManager-1.10.2-16.el7_5.x86_64.rpm          | 1.7 MB   00:00
+(3/71): NetworkManager-libnm-1.10.2-16.el7_5.x86_64.rpm    | 1.3 MB   00:00
+(4/71): NetworkManager-team-1.10.2-16.el7_5.x86_64.rpm     | 161 kB   00:00
+(5/71): NetworkManager-tui-1.10.2-16.el7_5.x86_64.rpm      | 235 kB   00:00
+(6/71): audit-2.8.1-3.el7_5.1.x86_64.rpm                   | 247 kB   00:00
+(7/71): audit-libs-2.8.1-3.el7_5.1.x86_64.rpm              |  99 kB   00:00
+(8/71): audit-libs-python-2.8.1-3.el7_5.1.x86_64.rpm       |  76 kB   00:00
+(9/71): bind-libs-lite-9.9.4-61.el7_5.1.x86_64.rpm         | 734 kB   00:00
+(10/71): bind-license-9.9.4-61.el7_5.1.noarch.rpm          |  85 kB   00:00
+(11/71): ca-certificates-2018.2.22-70.0.el7_5.noarch.rpm   | 392 kB   00:00
+(12/71): cloud-init-0.7.9-24.el7_5.1.x86_64.rpm            | 630 kB   00:00
+(13/71): binutils-2.27-28.base.el7_5.1.x86_64.rpm          | 5.9 MB   00:00
+(14/71): dhclient-4.2.5-68.el7_5.1.x86_64.rpm              | 284 kB   00:00
+(15/71): dhcp-common-4.2.5-68.el7_5.1.x86_64.rpm           | 175 kB   00:00
+(16/71): dhcp-libs-4.2.5-68.el7_5.1.x86_64.rpm             | 131 kB   00:00
+(17/71): dracut-033-535.el7_5.1.x86_64.rpm                 | 325 kB   00:00
+(18/71): dracut-config-generic-033-535.el7_5.1.x86_64.rpm  |  56 kB   00:00
+(19/71): dracut-config-rescue-033-535.el7_5.1.x86_64.rpm   |  58 kB   00:00
+(20/71): dracut-network-033-535.el7_5.1.x86_64.rpm         | 100 kB   00:00
+(21/71): e2fsprogs-1.42.9-12.el7_5.x86_64.rpm              | 699 kB   00:00
+(22/71): e2fsprogs-libs-1.42.9-12.el7_5.x86_64.rpm         | 167 kB   00:00
+(23/71): initscripts-9.49.41-1.el7_5.2.x86_64.rpm          | 438 kB   00:00
+(24/71): gnupg2-2.0.22-5.el7_5.x86_64.rpm                  | 1.5 MB   00:00
+(25/71): iptables-1.4.21-24.1.el7_5.x86_64.rpm             | 432 kB   00:00
+(26/71): iwl7265-firmware-22.0.7.0-62.2.el7_5.noarch.rpm   | 5.5 MB   00:00
+(27/71): kernel-tools-3.10.0-862.14.4.el7.x86_64.rpm       | 6.3 MB   00:00
+(28/71): kernel-tools-libs-3.10.0-862.14.4.el7.x86_64.rpm  | 6.2 MB   00:00
+(29/71): kexec-tools-2.0.15-13.el7_5.2.x86_64.rpm          | 341 kB   00:00
+(30/71): kpartx-0.4.9-119.el7_5.1.x86_64.rpm               |  76 kB   00:00
+(31/71): krb5-libs-1.15.1-19.el7.x86_64.rpm                | 748 kB   00:00
+(32/71): libblkid-2.23.2-52.el7_5.1.x86_64.rpm             | 178 kB   00:00
+(33/71): libcom_err-1.42.9-12.el7_5.x86_64.rpm             |  41 kB   00:00
+(34/71): libgcc-4.8.5-28.el7_5.1.x86_64.rpm                | 101 kB   00:00
+(35/71): kernel-3.10.0-862.14.4.el7.x86_64.rpm             |  46 MB   00:01
+(36/71): libgomp-4.8.5-28.el7_5.1.x86_64.rpm               | 156 kB   00:00
+(37/71): libgudev1-219-57.el7_5.3.x86_64.rpm               |  92 kB   00:00
+(38/71): libmount-2.23.2-52.el7_5.1.x86_64.rpm             | 180 kB   00:00
+(39/71): libss-1.42.9-12.el7_5.x86_64.rpm                  |  46 kB   00:00
+(40/71): libstdc++-4.8.5-28.el7_5.1.x86_64.rpm             | 304 kB   00:00
+(41/71): libuuid-2.23.2-52.el7_5.1.x86_64.rpm              |  81 kB   00:00
+(42/71): mariadb-libs-5.5.60-1.el7_5.x86_64.rpm            | 758 kB   00:00
+(43/71): microcode_ctl-2.1-29.16.el7_5.x86_64.rpm          | 1.4 MB   00:00
+(44/71): nspr-4.19.0-1.el7_5.x86_64.rpm                    | 127 kB   00:00
+(45/71): nss-softokn-3.36.0-5.el7_5.x86_64.rpm             | 315 kB   00:00
+(46/71): nss-3.36.0-7.el7_5.x86_64.rpm                     | 835 kB   00:00
+(47/71): nss-softokn-freebl-3.36.0-5.el7_5.x86_64.rpm      | 222 kB   00:00
+(48/71): nss-sysinit-3.36.0-7.el7_5.x86_64.rpm             |  62 kB   00:00
+(49/71): nss-tools-3.36.0-7.el7_5.x86_64.rpm               | 515 kB   00:00
+(50/71): nss-util-3.36.0-1.el7_5.x86_64.rpm                |  78 kB   00:00
+(51/71): procps-ng-3.3.10-17.el7_5.2.x86_64.rpm            | 290 kB   00:00
+(52/71): openldap-2.4.44-15.el7_5.x86_64.rpm               | 355 kB   00:00
+(53/71): python-2.7.5-69.el7_5.x86_64.rpm                  |  93 kB   00:00
+(54/71): python-libs-2.7.5-69.el7_5.x86_64.rpm             | 5.6 MB   00:00
+(55/71): python-perf-3.10.0-862.14.4.el7.x86_64.rpm        | 6.3 MB   00:00
+(56/71): qemu-guest-agent-2.8.0-2.el7_5.1.x86_64.rpm       | 150 kB   00:00
+(57/71): rsyslog-8.24.0-16.el7_5.4.x86_64.rpm              | 607 kB   00:00
+(58/71): selinux-policy-3.13.1-192.el7_5.6.noarch.rpm      | 453 kB   00:00
+(59/71): subscription-manager-1.20.11-1.el7_5.x86_64.rpm   | 993 kB   00:00
+(60/71): selinux-policy-targeted-3.13.1-192.el7_5.6.noarch | 6.6 MB   00:00
+(61/71): subscription-manager-rhsm-certificates-1.20.11-1. | 200 kB   00:00
+(62/71): subscription-manager-rhsm-1.20.11-1.el7_5.x86_64. | 285 kB   00:00
+(63/71): sudo-1.8.19p2-14.el7_5.x86_64.rpm                 | 1.1 MB   00:00
+(64/71): systemd-libs-219-57.el7_5.3.x86_64.rpm            | 402 kB   00:00
+(65/71): systemd-219-57.el7_5.3.x86_64.rpm                 | 5.0 MB   00:00
+(66/71): systemd-sysv-219-57.el7_5.3.x86_64.rpm            |  80 kB   00:00
+(67/71): tuned-2.9.0-1.el7_5.2.noarch.rpm                  | 244 kB   00:00
+(68/71): tzdata-2018e-3.el7.noarch.rpm                     | 482 kB   00:00
+(69/71): util-linux-2.23.2-52.el7_5.1.x86_64.rpm           | 2.0 MB   00:00
+(70/71): linux-firmware-20180220-62.2.git6d51311.el7_5.noa |  57 MB   00:02
+(71/71): yum-utils-1.1.31-46.el7_5.noarch.rpm              | 120 kB   00:00
+--------------------------------------------------------------------------------
+Total                                               33 MB/s | 175 MB  00:05
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : nspr-4.19.0-1.el7_5.x86_64                                 1/140
+  Updating   : libgcc-4.8.5-28.el7_5.1.x86_64                             2/140
+  Updating   : systemd-libs-219-57.el7_5.3.x86_64                         3/140
+  Updating   : nss-util-3.36.0-1.el7_5.x86_64                             4/140
+  Updating   : libuuid-2.23.2-52.el7_5.1.x86_64                           5/140
+  Updating   : audit-libs-2.8.1-3.el7_5.1.x86_64                          6/140
+  Updating   : libcom_err-1.42.9-12.el7_5.x86_64                          7/140
+  Updating   : libblkid-2.23.2-52.el7_5.1.x86_64                          8/140
+  Updating   : procps-ng-3.3.10-17.el7_5.2.x86_64                         9/140
+  Updating   : python-libs-2.7.5-69.el7_5.x86_64                         10/140
+  Updating   : python-2.7.5-69.el7_5.x86_64                              11/140
+  Updating   : libmount-2.23.2-52.el7_5.1.x86_64                         12/140
+  Updating   : systemd-219-57.el7_5.3.x86_64                             13/140
+  Updating   : util-linux-2.23.2-52.el7_5.1.x86_64                       14/140
+  Updating   : initscripts-9.49.41-1.el7_5.2.x86_64                      15/140
+  Updating   : krb5-libs-1.15.1-19.el7.x86_64                            16/140
+  Updating   : libstdc++-4.8.5-28.el7_5.1.x86_64                         17/140
+  Updating   : systemd-sysv-219-57.el7_5.3.x86_64                        18/140
+  Updating   : python-perf-3.10.0-862.14.4.el7.x86_64                    19/140
+  Updating   : libss-1.42.9-12.el7_5.x86_64                              20/140
+  Updating   : e2fsprogs-libs-1.42.9-12.el7_5.x86_64                     21/140
+  Updating   : e2fsprogs-1.42.9-12.el7_5.x86_64                          22/140
+  Updating   : nss-softokn-freebl-3.36.0-5.el7_5.x86_64                  23/140
+  Updating   : nss-softokn-3.36.0-5.el7_5.x86_64                         24/140
+  Updating   : nss-3.36.0-7.el7_5.x86_64                                 25/140
+  Updating   : nss-sysinit-3.36.0-7.el7_5.x86_64                         26/140
+  Updating   : 1:NetworkManager-libnm-1.10.2-16.el7_5.x86_64             27/140
+  Updating   : 1:NetworkManager-1.10.2-16.el7_5.x86_64                   28/140
+  Updating   : nss-tools-3.36.0-7.el7_5.x86_64                           29/140
+  Updating   : openldap-2.4.44-15.el7_5.x86_64                           30/140
+  Updating   : 12:dhcp-libs-4.2.5-68.el7_5.1.x86_64                      31/140
+  Updating   : 12:dhcp-common-4.2.5-68.el7_5.1.x86_64                    32/140
+  Updating   : selinux-policy-3.13.1-192.el7_5.6.noarch                  33/140
+  Updating   : kernel-tools-libs-3.10.0-862.14.4.el7.x86_64              34/140
+  Updating   : kpartx-0.4.9-119.el7_5.1.x86_64                           35/140
+  Updating   : dracut-033-535.el7_5.1.x86_64                             36/140
+  Updating   : 32:bind-license-9.9.4-61.el7_5.1.noarch                   37/140
+  Updating   : 32:bind-libs-lite-9.9.4-61.el7_5.1.x86_64                 38/140
+  Updating   : 12:dhclient-4.2.5-68.el7_5.1.x86_64                       39/140
+  Updating   : dracut-network-033-535.el7_5.1.x86_64                     40/140
+  Installing : linux-firmware-20180220-62.2.git6d51311.el7_5.noarch      41/140
+  Updating   : subscription-manager-rhsm-certificates-1.20.11-1.el7_5    42/140
+  Updating   : subscription-manager-rhsm-1.20.11-1.el7_5.x86_64          43/140
+  Updating   : subscription-manager-1.20.11-1.el7_5.x86_64               44/140
+  Installing : kernel-3.10.0-862.14.4.el7.x86_64                         45/140
+  Updating   : kexec-tools-2.0.15-13.el7_5.2.x86_64                      46/140
+  Updating   : dracut-config-generic-033-535.el7_5.1.x86_64              47/140
+  Updating   : dracut-config-rescue-033-535.el7_5.1.x86_64               48/140
+  Updating   : kernel-tools-3.10.0-862.14.4.el7.x86_64                   49/140
+  Updating   : selinux-policy-targeted-3.13.1-192.el7_5.6.noarch         50/140
+  Updating   : sudo-1.8.19p2-14.el7_5.x86_64                             51/140
+  Updating   : gnupg2-2.0.22-5.el7_5.x86_64                              52/140
+  Updating   : 1:NetworkManager-tui-1.10.2-16.el7_5.x86_64               53/140
+  Updating   : 1:NetworkManager-team-1.10.2-16.el7_5.x86_64              54/140
+  Updating   : cloud-init-0.7.9-24.el7_5.1.x86_64                        55/140
+  Updating   : tuned-2.9.0-1.el7_5.2.noarch                              56/140
+  Updating   : audit-2.8.1-3.el7_5.1.x86_64                              57/140
+  Updating   : 10:qemu-guest-agent-2.8.0-2.el7_5.1.x86_64                58/140
+  Updating   : 1:mariadb-libs-5.5.60-1.el7_5.x86_64                      59/140
+  Updating   : rsyslog-8.24.0-16.el7_5.4.x86_64                          60/140
+  Updating   : 2:microcode_ctl-2.1-29.16.el7_5.x86_64                    61/140
+  Updating   : audit-libs-python-2.8.1-3.el7_5.1.x86_64                  62/140
+  Updating   : yum-utils-1.1.31-46.el7_5.noarch                          63/140
+  Updating   : libgudev1-219-57.el7_5.3.x86_64                           64/140
+  Updating   : binutils-2.27-28.base.el7_5.1.x86_64                      65/140
+  Updating   : tzdata-2018e-3.el7.noarch                                 66/140
+  Updating   : ca-certificates-2018.2.22-70.0.el7_5.noarch               67/140
+  Updating   : iptables-1.4.21-24.1.el7_5.x86_64                         68/140
+  Updating   : libgomp-4.8.5-28.el7_5.1.x86_64                           69/140
+  Updating   : iwl7265-firmware-22.0.7.0-62.2.el7_5.noarch               70/140
+  Updating   : 1:NetworkManager-config-server-1.10.2-16.el7_5.noarch     71/140
+  Cleanup    : cloud-init-0.7.9-24.el7.x86_64                            72/140
+  Cleanup    : tuned-2.9.0-1.el7.noarch                                  73/140
+  Cleanup    : dracut-config-rescue-033-535.el7.x86_64                   74/140
+  Cleanup    : yum-utils-1.1.31-45.el7.noarch                            75/140
+  Cleanup    : dracut-config-generic-033-535.el7.x86_64                  76/140
+  Cleanup    : selinux-policy-targeted-3.13.1-192.el7.noarch             77/140
+  Cleanup    : selinux-policy-3.13.1-192.el7.noarch                      78/140
+  Cleanup    : tzdata-2018c-1.el7.noarch                                 79/140
+  Cleanup    : ca-certificates-2017.2.20-71.el7.noarch                   80/140
+  Cleanup    : iwl7265-firmware-22.0.7.0-62.el7.noarch                   81/140
+  Cleanup    : 1:NetworkManager-config-server-1.10.2-13.el7.noarch       82/140
+  Cleanup    : 1:NetworkManager-tui-1.10.2-13.el7.x86_64                 83/140
+  Cleanup    : e2fsprogs-1.42.9-11.el7.x86_64                            84/140
+  Cleanup    : audit-2.8.1-3.el7.x86_64                                  85/140
+  Cleanup    : rsyslog-8.24.0-16.el7.x86_64                              86/140
+  Cleanup    : subscription-manager-1.20.10-1.el7.x86_64                 87/140
+  Cleanup    : subscription-manager-rhsm-1.20.10-1.el7.x86_64            88/140
+  Cleanup    : kexec-tools-2.0.15-13.el7.x86_64                          89/140
+  Cleanup    : 10:qemu-guest-agent-2.8.0-2.el7.x86_64                    90/140
+  Cleanup    : dracut-network-033-535.el7.x86_64                         91/140
+  Cleanup    : 12:dhclient-4.2.5-68.el7.x86_64                           92/140
+  Cleanup    : systemd-sysv-219-57.el7.x86_64                            93/140
+  Cleanup    : dracut-033-535.el7.x86_64                                 94/140
+  Cleanup    : initscripts-9.49.41-1.el7.x86_64                          95/140
+  Cleanup    : util-linux-2.23.2-52.el7.x86_64                           96/140
+  Cleanup    : 32:bind-libs-lite-9.9.4-61.el7.x86_64                     97/140
+  Cleanup    : python-perf-3.10.0-862.el7.x86_64                         98/140
+  Cleanup    : 1:NetworkManager-team-1.10.2-13.el7.x86_64                99/140
+  Cleanup    : 1:NetworkManager-1.10.2-13.el7.x86_64                    100/140
+  Cleanup    : 1:NetworkManager-libnm-1.10.2-13.el7.x86_64              101/140
+  Cleanup    : sudo-1.8.19p2-13.el7.x86_64                              102/140
+  Cleanup    : audit-libs-python-2.8.1-3.el7.x86_64                     103/140
+  Cleanup    : 12:dhcp-common-4.2.5-68.el7.x86_64                       104/140
+  Cleanup    : 12:dhcp-libs-4.2.5-68.el7.x86_64                         105/140
+  Cleanup    : python-2.7.5-68.el7.x86_64                               106/140
+  Cleanup    : krb5-libs-1.15.1-18.el7.x86_64                           107/140
+  Cleanup    : procps-ng-3.3.10-17.el7.x86_64                           108/140
+  Cleanup    : e2fsprogs-libs-1.42.9-11.el7.x86_64                      109/140
+  Cleanup    : libss-1.42.9-11.el7.x86_64                               110/140
+  Cleanup    : 2:microcode_ctl-2.1-29.el7.x86_64                        111/140
+  Cleanup    : systemd-219-57.el7.x86_64                                112/140
+  Cleanup    : libmount-2.23.2-52.el7.x86_64                            113/140
+  Cleanup    : libblkid-2.23.2-52.el7.x86_64                            114/140
+  Cleanup    : gnupg2-2.0.22-4.el7.x86_64                               115/140
+  Cleanup    : openldap-2.4.44-13.el7.x86_64                            116/140
+  Cleanup    : nss-tools-3.34.0-4.el7.x86_64                            117/140
+  Cleanup    : nss-sysinit-3.34.0-4.el7.x86_64                          118/140
+  Cleanup    : nss-3.34.0-4.el7.x86_64                                  119/140
+  Cleanup    : nss-softokn-3.34.0-2.el7.x86_64                          120/140
+  Cleanup    : nss-softokn-freebl-3.34.0-2.el7.x86_64                   121/140
+  Cleanup    : nss-util-3.34.0-2.el7.x86_64                             122/140
+  Cleanup    : 1:mariadb-libs-5.5.56-2.el7.x86_64                       123/140
+  Cleanup    : libstdc++-4.8.5-28.el7.x86_64                            124/140
+  Cleanup    : libgudev1-219-57.el7.x86_64                              125/140
+  Cleanup    : systemd-libs-219-57.el7.x86_64                           126/140
+  Cleanup    : kernel-tools-3.10.0-862.el7.x86_64                       127/140
+  Cleanup    : 32:bind-license-9.9.4-61.el7.noarch                      128/140
+  Cleanup    : subscription-manager-rhsm-certificates-1.20.10-1.el7.x   129/140
+  Cleanup    : kernel-tools-libs-3.10.0-862.el7.x86_64                  130/140
+  Cleanup    : libgcc-4.8.5-28.el7.x86_64                               131/140
+  Cleanup    : nspr-4.17.0-1.el7.x86_64                                 132/140
+  Cleanup    : libuuid-2.23.2-52.el7.x86_64                             133/140
+  Cleanup    : audit-libs-2.8.1-3.el7.x86_64                            134/140
+  Cleanup    : libcom_err-1.42.9-11.el7.x86_64                          135/140
+  Cleanup    : python-libs-2.7.5-68.el7.x86_64                          136/140
+  Cleanup    : kpartx-0.4.9-119.el7.x86_64                              137/140
+  Cleanup    : binutils-2.27-27.base.el7.x86_64                         138/140
+  Cleanup    : iptables-1.4.21-24.el7.x86_64                            139/140
+  Cleanup    : libgomp-4.8.5-28.el7.x86_64                              140/140
+  Verifying  : 1:NetworkManager-config-server-1.10.2-16.el7_5.noarch      1/140
+  Verifying  : subscription-manager-rhsm-certificates-1.20.11-1.el7_5     2/140
+  Verifying  : linux-firmware-20180220-62.2.git6d51311.el7_5.noarch       3/140
+  Verifying  : iwl7265-firmware-22.0.7.0-62.2.el7_5.noarch                4/140
+  Verifying  : libgomp-4.8.5-28.el7_5.1.x86_64                            5/140
+  Verifying  : 1:NetworkManager-tui-1.10.2-16.el7_5.x86_64                6/140
+  Verifying  : libcom_err-1.42.9-12.el7_5.x86_64                          7/140
+  Verifying  : selinux-policy-targeted-3.13.1-192.el7_5.6.noarch          8/140
+  Verifying  : 32:bind-license-9.9.4-61.el7_5.1.noarch                    9/140
+  Verifying  : iptables-1.4.21-24.1.el7_5.x86_64                         10/140
+  Verifying  : systemd-libs-219-57.el7_5.3.x86_64                        11/140
+  Verifying  : nss-sysinit-3.36.0-7.el7_5.x86_64                         12/140
+  Verifying  : util-linux-2.23.2-52.el7_5.1.x86_64                       13/140
+  Verifying  : 1:NetworkManager-1.10.2-16.el7_5.x86_64                   14/140
+  Verifying  : audit-libs-python-2.8.1-3.el7_5.1.x86_64                  15/140
+  Verifying  : 12:dhcp-common-4.2.5-68.el7_5.1.x86_64                    16/140
+  Verifying  : dracut-config-generic-033-535.el7_5.1.x86_64              17/140
+  Verifying  : kpartx-0.4.9-119.el7_5.1.x86_64                           18/140
+  Verifying  : nss-util-3.36.0-1.el7_5.x86_64                            19/140
+  Verifying  : 32:bind-libs-lite-9.9.4-61.el7_5.1.x86_64                 20/140
+  Verifying  : 10:qemu-guest-agent-2.8.0-2.el7_5.1.x86_64                21/140
+  Verifying  : tuned-2.9.0-1.el7_5.2.noarch                              22/140
+  Verifying  : kernel-tools-3.10.0-862.14.4.el7.x86_64                   23/140
+  Verifying  : sudo-1.8.19p2-14.el7_5.x86_64                             24/140
+  Verifying  : dracut-network-033-535.el7_5.1.x86_64                     25/140
+  Verifying  : e2fsprogs-1.42.9-12.el7_5.x86_64                          26/140
+  Verifying  : libuuid-2.23.2-52.el7_5.1.x86_64                          27/140
+  Verifying  : libgcc-4.8.5-28.el7_5.1.x86_64                            28/140
+  Verifying  : libgudev1-219-57.el7_5.3.x86_64                           29/140
+  Verifying  : systemd-sysv-219-57.el7_5.3.x86_64                        30/140
+  Verifying  : rsyslog-8.24.0-16.el7_5.4.x86_64                          31/140
+  Verifying  : audit-libs-2.8.1-3.el7_5.1.x86_64                         32/140
+  Verifying  : python-2.7.5-69.el7_5.x86_64                              33/140
+  Verifying  : cloud-init-0.7.9-24.el7_5.1.x86_64                        34/140
+  Verifying  : dracut-033-535.el7_5.1.x86_64                             35/140
+  Verifying  : ca-certificates-2018.2.22-70.0.el7_5.noarch               36/140
+  Verifying  : openldap-2.4.44-15.el7_5.x86_64                           37/140
+  Verifying  : nss-tools-3.36.0-7.el7_5.x86_64                           38/140
+  Verifying  : 1:NetworkManager-team-1.10.2-16.el7_5.x86_64              39/140
+  Verifying  : tzdata-2018e-3.el7.noarch                                 40/140
+  Verifying  : krb5-libs-1.15.1-19.el7.x86_64                            41/140
+  Verifying  : 1:mariadb-libs-5.5.60-1.el7_5.x86_64                      42/140
+  Verifying  : kernel-3.10.0-862.14.4.el7.x86_64                         43/140
+  Verifying  : 12:dhcp-libs-4.2.5-68.el7_5.1.x86_64                      44/140
+  Verifying  : yum-utils-1.1.31-46.el7_5.noarch                          45/140
+  Verifying  : gnupg2-2.0.22-5.el7_5.x86_64                              46/140
+  Verifying  : libss-1.42.9-12.el7_5.x86_64                              47/140
+  Verifying  : python-libs-2.7.5-69.el7_5.x86_64                         48/140
+  Verifying  : e2fsprogs-libs-1.42.9-12.el7_5.x86_64                     49/140
+  Verifying  : python-perf-3.10.0-862.14.4.el7.x86_64                    50/140
+  Verifying  : systemd-219-57.el7_5.3.x86_64                             51/140
+  Verifying  : binutils-2.27-28.base.el7_5.1.x86_64                      52/140
+  Verifying  : procps-ng-3.3.10-17.el7_5.2.x86_64                        53/140
+  Verifying  : 2:microcode_ctl-2.1-29.16.el7_5.x86_64                    54/140
+  Verifying  : nss-softokn-freebl-3.36.0-5.el7_5.x86_64                  55/140
+  Verifying  : libblkid-2.23.2-52.el7_5.1.x86_64                         56/140
+  Verifying  : nspr-4.19.0-1.el7_5.x86_64                                57/140
+  Verifying  : nss-softokn-3.36.0-5.el7_5.x86_64                         58/140
+  Verifying  : kernel-tools-libs-3.10.0-862.14.4.el7.x86_64              59/140
+  Verifying  : audit-2.8.1-3.el7_5.1.x86_64                              60/140
+  Verifying  : nss-3.36.0-7.el7_5.x86_64                                 61/140
+  Verifying  : initscripts-9.49.41-1.el7_5.2.x86_64                      62/140
+  Verifying  : 1:NetworkManager-libnm-1.10.2-16.el7_5.x86_64             63/140
+  Verifying  : dracut-config-rescue-033-535.el7_5.1.x86_64               64/140
+  Verifying  : libmount-2.23.2-52.el7_5.1.x86_64                         65/140
+  Verifying  : kexec-tools-2.0.15-13.el7_5.2.x86_64                      66/140
+  Verifying  : subscription-manager-rhsm-1.20.11-1.el7_5.x86_64          67/140
+  Verifying  : 12:dhclient-4.2.5-68.el7_5.1.x86_64                       68/140
+  Verifying  : subscription-manager-1.20.11-1.el7_5.x86_64               69/140
+  Verifying  : selinux-policy-3.13.1-192.el7_5.6.noarch                  70/140
+  Verifying  : libstdc++-4.8.5-28.el7_5.1.x86_64                         71/140
+  Verifying  : python-libs-2.7.5-68.el7.x86_64                           72/140
+  Verifying  : nss-sysinit-3.34.0-4.el7.x86_64                           73/140
+  Verifying  : libgomp-4.8.5-28.el7.x86_64                               74/140
+  Verifying  : yum-utils-1.1.31-45.el7.noarch                            75/140
+  Verifying  : libstdc++-4.8.5-28.el7.x86_64                             76/140
+  Verifying  : 1:mariadb-libs-5.5.56-2.el7.x86_64                        77/140
+  Verifying  : 2:microcode_ctl-2.1-29.el7.x86_64                         78/140
+  Verifying  : libgcc-4.8.5-28.el7.x86_64                                79/140
+  Verifying  : kexec-tools-2.0.15-13.el7.x86_64                          80/140
+  Verifying  : krb5-libs-1.15.1-18.el7.x86_64                            81/140
+  Verifying  : iwl7265-firmware-22.0.7.0-62.el7.noarch                   82/140
+  Verifying  : selinux-policy-3.13.1-192.el7.noarch                      83/140
+  Verifying  : dracut-033-535.el7.x86_64                                 84/140
+  Verifying  : selinux-policy-targeted-3.13.1-192.el7.noarch             85/140
+  Verifying  : util-linux-2.23.2-52.el7.x86_64                           86/140
+  Verifying  : systemd-sysv-219-57.el7.x86_64                            87/140
+  Verifying  : tzdata-2018c-1.el7.noarch                                 88/140
+  Verifying  : dracut-network-033-535.el7.x86_64                         89/140
+  Verifying  : nss-util-3.34.0-2.el7.x86_64                              90/140
+  Verifying  : 1:NetworkManager-config-server-1.10.2-13.el7.noarch       91/140
+  Verifying  : subscription-manager-rhsm-1.20.10-1.el7.x86_64            92/140
+  Verifying  : 32:bind-libs-lite-9.9.4-61.el7.x86_64                     93/140
+  Verifying  : subscription-manager-1.20.10-1.el7.x86_64                 94/140
+  Verifying  : gnupg2-2.0.22-4.el7.x86_64                                95/140
+  Verifying  : dracut-config-generic-033-535.el7.x86_64                  96/140
+  Verifying  : sudo-1.8.19p2-13.el7.x86_64                               97/140
+  Verifying  : subscription-manager-rhsm-certificates-1.20.10-1.el7.x    98/140
+  Verifying  : libcom_err-1.42.9-11.el7.x86_64                           99/140
+  Verifying  : e2fsprogs-libs-1.42.9-11.el7.x86_64                      100/140
+  Verifying  : binutils-2.27-27.base.el7.x86_64                         101/140
+  Verifying  : tuned-2.9.0-1.el7.noarch                                 102/140
+  Verifying  : iptables-1.4.21-24.el7.x86_64                            103/140
+  Verifying  : 1:NetworkManager-1.10.2-13.el7.x86_64                    104/140
+  Verifying  : 12:dhcp-libs-4.2.5-68.el7.x86_64                         105/140
+  Verifying  : 1:NetworkManager-tui-1.10.2-13.el7.x86_64                106/140
+  Verifying  : audit-2.8.1-3.el7.x86_64                                 107/140
+  Verifying  : nss-softokn-3.34.0-2.el7.x86_64                          108/140
+  Verifying  : kernel-tools-libs-3.10.0-862.el7.x86_64                  109/140
+  Verifying  : 32:bind-license-9.9.4-61.el7.noarch                      110/140
+  Verifying  : initscripts-9.49.41-1.el7.x86_64                         111/140
+  Verifying  : 10:qemu-guest-agent-2.8.0-2.el7.x86_64                   112/140
+  Verifying  : ca-certificates-2017.2.20-71.el7.noarch                  113/140
+  Verifying  : 1:NetworkManager-libnm-1.10.2-13.el7.x86_64              114/140
+  Verifying  : libuuid-2.23.2-52.el7.x86_64                             115/140
+  Verifying  : rsyslog-8.24.0-16.el7.x86_64                             116/140
+  Verifying  : libmount-2.23.2-52.el7.x86_64                            117/140
+  Verifying  : audit-libs-2.8.1-3.el7.x86_64                            118/140
+  Verifying  : openldap-2.4.44-13.el7.x86_64                            119/140
+  Verifying  : 12:dhclient-4.2.5-68.el7.x86_64                          120/140
+  Verifying  : 1:NetworkManager-team-1.10.2-13.el7.x86_64               121/140
+  Verifying  : nss-softokn-freebl-3.34.0-2.el7.x86_64                   122/140
+  Verifying  : nspr-4.17.0-1.el7.x86_64                                 123/140
+  Verifying  : nss-tools-3.34.0-4.el7.x86_64                            124/140
+  Verifying  : 12:dhcp-common-4.2.5-68.el7.x86_64                       125/140
+  Verifying  : audit-libs-python-2.8.1-3.el7.x86_64                     126/140
+  Verifying  : python-2.7.5-68.el7.x86_64                               127/140
+  Verifying  : dracut-config-rescue-033-535.el7.x86_64                  128/140
+  Verifying  : python-perf-3.10.0-862.el7.x86_64                        129/140
+  Verifying  : libss-1.42.9-11.el7.x86_64                               130/140
+  Verifying  : procps-ng-3.3.10-17.el7.x86_64                           131/140
+  Verifying  : libblkid-2.23.2-52.el7.x86_64                            132/140
+  Verifying  : kpartx-0.4.9-119.el7.x86_64                              133/140
+  Verifying  : libgudev1-219-57.el7.x86_64                              134/140
+  Verifying  : nss-3.34.0-4.el7.x86_64                                  135/140
+  Verifying  : kernel-tools-3.10.0-862.el7.x86_64                       136/140
+  Verifying  : cloud-init-0.7.9-24.el7.x86_64                           137/140
+  Verifying  : systemd-219-57.el7.x86_64                                138/140
+  Verifying  : systemd-libs-219-57.el7.x86_64                           139/140
+  Verifying  : e2fsprogs-1.42.9-11.el7.x86_64                           140/140
+
+Installed:
+  kernel.x86_64 0:3.10.0-862.14.4.el7
+
+Dependency Installed:
+  linux-firmware.noarch 0:20180220-62.2.git6d51311.el7_5
+
+Updated:
+  NetworkManager.x86_64 1:1.10.2-16.el7_5
+  NetworkManager-config-server.noarch 1:1.10.2-16.el7_5
+  NetworkManager-libnm.x86_64 1:1.10.2-16.el7_5
+  NetworkManager-team.x86_64 1:1.10.2-16.el7_5
+  NetworkManager-tui.x86_64 1:1.10.2-16.el7_5
+  audit.x86_64 0:2.8.1-3.el7_5.1
+  audit-libs.x86_64 0:2.8.1-3.el7_5.1
+  audit-libs-python.x86_64 0:2.8.1-3.el7_5.1
+  bind-libs-lite.x86_64 32:9.9.4-61.el7_5.1
+  bind-license.noarch 32:9.9.4-61.el7_5.1
+  binutils.x86_64 0:2.27-28.base.el7_5.1
+  ca-certificates.noarch 0:2018.2.22-70.0.el7_5
+  cloud-init.x86_64 0:0.7.9-24.el7_5.1
+  dhclient.x86_64 12:4.2.5-68.el7_5.1
+  dhcp-common.x86_64 12:4.2.5-68.el7_5.1
+  dhcp-libs.x86_64 12:4.2.5-68.el7_5.1
+  dracut.x86_64 0:033-535.el7_5.1
+  dracut-config-generic.x86_64 0:033-535.el7_5.1
+  dracut-config-rescue.x86_64 0:033-535.el7_5.1
+  dracut-network.x86_64 0:033-535.el7_5.1
+  e2fsprogs.x86_64 0:1.42.9-12.el7_5
+  e2fsprogs-libs.x86_64 0:1.42.9-12.el7_5
+  gnupg2.x86_64 0:2.0.22-5.el7_5
+  initscripts.x86_64 0:9.49.41-1.el7_5.2
+  iptables.x86_64 0:1.4.21-24.1.el7_5
+  iwl7265-firmware.noarch 0:22.0.7.0-62.2.el7_5
+  kernel-tools.x86_64 0:3.10.0-862.14.4.el7
+  kernel-tools-libs.x86_64 0:3.10.0-862.14.4.el7
+  kexec-tools.x86_64 0:2.0.15-13.el7_5.2
+  kpartx.x86_64 0:0.4.9-119.el7_5.1
+  krb5-libs.x86_64 0:1.15.1-19.el7
+  libblkid.x86_64 0:2.23.2-52.el7_5.1
+  libcom_err.x86_64 0:1.42.9-12.el7_5
+  libgcc.x86_64 0:4.8.5-28.el7_5.1
+  libgomp.x86_64 0:4.8.5-28.el7_5.1
+  libgudev1.x86_64 0:219-57.el7_5.3
+  libmount.x86_64 0:2.23.2-52.el7_5.1
+  libss.x86_64 0:1.42.9-12.el7_5
+  libstdc++.x86_64 0:4.8.5-28.el7_5.1
+  libuuid.x86_64 0:2.23.2-52.el7_5.1
+  mariadb-libs.x86_64 1:5.5.60-1.el7_5
+  microcode_ctl.x86_64 2:2.1-29.16.el7_5
+  nspr.x86_64 0:4.19.0-1.el7_5
+  nss.x86_64 0:3.36.0-7.el7_5
+  nss-softokn.x86_64 0:3.36.0-5.el7_5
+  nss-softokn-freebl.x86_64 0:3.36.0-5.el7_5
+  nss-sysinit.x86_64 0:3.36.0-7.el7_5
+  nss-tools.x86_64 0:3.36.0-7.el7_5
+  nss-util.x86_64 0:3.36.0-1.el7_5
+  openldap.x86_64 0:2.4.44-15.el7_5
+  procps-ng.x86_64 0:3.3.10-17.el7_5.2
+  python.x86_64 0:2.7.5-69.el7_5
+  python-libs.x86_64 0:2.7.5-69.el7_5
+  python-perf.x86_64 0:3.10.0-862.14.4.el7
+  qemu-guest-agent.x86_64 10:2.8.0-2.el7_5.1
+  rsyslog.x86_64 0:8.24.0-16.el7_5.4
+  selinux-policy.noarch 0:3.13.1-192.el7_5.6
+  selinux-policy-targeted.noarch 0:3.13.1-192.el7_5.6
+  subscription-manager.x86_64 0:1.20.11-1.el7_5
+  subscription-manager-rhsm.x86_64 0:1.20.11-1.el7_5
+  subscription-manager-rhsm-certificates.x86_64 0:1.20.11-1.el7_5
+  sudo.x86_64 0:1.8.19p2-14.el7_5
+  systemd.x86_64 0:219-57.el7_5.3
+  systemd-libs.x86_64 0:219-57.el7_5.3
+  systemd-sysv.x86_64 0:219-57.el7_5.3
+  tuned.noarch 0:2.9.0-1.el7_5.2
+  tzdata.noarch 0:2018e-3.el7
+  util-linux.x86_64 0:2.23.2-52.el7_5.1
+  yum-utils.noarch 0:1.1.31-46.el7_5
+
+Complete!
+[root@ip-172-31-18-146 ~]# adduser kiran
+[root@ip-172-31-18-146 ~]# passwd
+Changing password for user root.
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ip-172-31-18-146 ~]# visudo
+[root@ip-172-31-18-146 ~]# vi /etc/ssh/sshd_config
+[root@ip-172-31-18-146 ~]# service sshd restart
+Redirecting to /bin/systemctl restart sshd.service
+[root@ip-172-31-18-146 ~]# su kiran
+[kiran@ip-172-31-18-146 root]$ exit
+exit
+[root@ip-172-31-18-146 ~]# visudo
+[root@ip-172-31-18-146 ~]# userdel kiran
+[root@ip-172-31-18-146 ~]# adduser kiran
+adduser: warning: the home directory already exists.
+Not copying any file from skel directory into it.
+Creating mailbox file: File exists
+[root@ip-172-31-18-146 ~]# su kiran
+[kiran@ip-172-31-18-146 root]$ cd
+[kiran@ip-172-31-18-146 ~]$
+[kiran@ip-172-31-18-146 ~]$ exit
+exit
+[root@ip-172-31-18-146 ~]# user
+-bash: user: command not found
+[root@ip-172-31-18-146 ~]# remove user kiran
+-bash: remove: command not found
+[root@ip-172-31-18-146 ~]# userdel -r kiran
+[root@ip-172-31-18-146 ~]# su kiran
+su: user kiran does not exist
+[root@ip-172-31-18-146 ~]# adduser kiran
+[root@ip-172-31-18-146 ~]# passwd kiran
+Changing password for user kiran.
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ip-172-31-18-146 ~]# visudo
+[root@ip-172-31-18-146 ~]# Connection reset by 13.250.46.64 port 22
+a
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ec2-user@ec2-13-250-46-64.ap-southeast-1.compute.amazonaws.com
+Last login: Mon Oct  8 06:45:55 2018 from 157.48.142.48
+[ec2-user@ip-172-31-18-146 ~]$ sudo -i
+[root@ip-172-31-18-146 ~]# java -version
+java version "1.6.0_41"
+OpenJDK Runtime Environment (IcedTea6 1.13.13) (rhel-1.13.13.1.el7_3-x86_64)
+OpenJDK 64-Bit Server VM (build 23.41-b41, mixed mode)
+[root@ip-172-31-18-146 ~]# ^C
+[root@ip-172-31-18-146 ~]#

@@ -1,0 +1,90 @@
+ansible install step by stpe: ON MASTER
+
+sudo -i
+apt-get update
+
+then instal ansible server open google.com
+
+root@ip-172-31-23-110:~#         sudo apt-get install software-properties-common
+root@ip-172-31-23-110:~#         sudo apt-add-repository ppa:ansible/ansible
+root@ip-172-31-23-110:~#         apt-get update
+root@ip-172-31-23-110:~#         sudo apt-get install ansible
+root@ip-172-31-23-110:~#         apt-get update
+			NODE SYNTAX
+root@ip-172-31-23-110:~#         adduser sree    (anyname)
+Enter new UNIX password:         sree
+Retype new UNIX password:        sree
+
+root@ip-172-31-23-110:~#         visudo
+                                 sree ALL(ALL:ALL) NOPASSWD:ALL
+root@ip-172-31-23-110:~#         vi /etc/ssh/sshd_config
+                                 passwordauthenication yes and save
+root@ip-172-31-23-110:~#         apt-get update
+root@ip-172-31-23-110:~#         service ssh restart
+root@ip-172-31-23-110:~#         su sree
+sree@ip-172-31-23-110:/root$     ssh-keygen
+sree@ip-172-31-23-110:/root$     ssh-copy-id 172.31.21.70
+sree@ip-172-31-23-110:/root$     cd
+sree@ip-172-31-23-110:~$         vis myhosts
+sree@ip-172-31-23-110:~$         ansible all -i myhosts -m ping
+
+success
+172.31.21.70 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+
+sree@ip-172-31-23-110:~$         ansible all -i myhosts -b -m apt -a "name=git"
+sucess
+
+sree@ip-172-31-23-110:~$         ansible all -i myhosts -b -m apt -a "name-apache2"
+success
+
+
+
+ANSIBLE REPOSITORY ADD
+
+sree@ip-172-31-23-110:~$       git clone (copy github path paste) 
+sree@ip-172-31-23-110:~$       ls     (then it will show ansible folder)
+sree@ip-172-31-23-110:~$       ansible-galaxy init (give any name ex:tom7)
+sree@ip-172-31-23-110:~$       ls
+                               ( ansible myhosts tom7)
+
+
+
+create a new folder on desktop (ansible folder) right click git besh her paste this commands
+and open the google.com github search ansi
+echo "# ansible1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/rajnikanthchinna/ansible1.git
+git push -u origin master
+
+open locan system:
+paste this commands in local systme each line 
+
+open the master 
+
+sree@ip-172-31-23-110:~ansi$		git add -A
+sree@ip-172-31-23-110:~ansi$		git commit -m "anyname"
+      
+"run commands copy paste in master" Change the Mail id and User name as of GITHUB MAIL AND USERNAME
+Ex:    git config "rajniaknthchinna12@gmail.com"
+name:  git config "rajnikanthchinna"
+
+sree@ip-172-31-23-110:~$        git push
+				type username
+				and password
+
+
+ON Local System 
+git pull
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop
+$ scp -i ansible.pem ec2-user@13.229.126.200:/usr/share/tomcat/conf/tomcat.conf .
+Warning: Identity file ansible.pem not accessible: No such file or directory.
+ec2-user@13.229.126.200's password:
+Permission denied, please try again.
+ec2-user@13.229.126.200's password:
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop
+$

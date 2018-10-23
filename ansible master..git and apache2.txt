@@ -1,0 +1,712 @@
+
+Sreekanth@Sreekanth-IT-PC MINGW64 ~/Desktop
+$ ssh -i "Devops.pem" ubuntu@ec2-13-229-222-231.ap-southeast-1.compute.amazonaws.com
+The authenticity of host 'ec2-13-229-222-231.ap-southeast-1.compute.amazonaws.com (13.229.222.231)' can't be established.
+ECDSA key fingerprint is SHA256:qLR0Fn7PuppYa9xnx9opiRvi3a/lsW1qB9yGmTQG+ks.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-13-229-222-231.ap-southeast-1.compute.amazonaws.com,13.229.222.231' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Oct  4 17:29:26 UTC 2018
+
+  System load: 0.0               Memory usage: 5%   Processes:       81
+  Usage of /:  10.2% of 7.74GB   Swap usage:   0%   Users logged in: 0
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+
+ubuntu@ip-172-31-23-110:~$
+ubuntu@ip-172-31-23-110:~$
+ubuntu@ip-172-31-23-110:~$
+ubuntu@ip-172-31-23-110:~$
+ubuntu@ip-172-31-23-110:~$ sudo -i
+root@ip-172-31-23-110:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources [422 kB]
+Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources [6,322 B]
+Get:4 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources [213 kB]
+Get:5 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources [7,435 B]
+Get:6 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages [1,106 kB]
+Get:7 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.2 kB]
+Get:8 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages [492 kB]
+Get:9 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.6 kB]
+Get:10 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en [551 kB]
+Get:11 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en [7,616 B]
+Get:12 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en [4,021 B]
+Get:13 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en [262 kB]
+Get:14 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources [9,709 B]
+Get:15 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+Get:16 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources [35.4 kB]
+Get:17 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources [1,896 B]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Get:18 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:19 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:20 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:21 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:22 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Get:23 http://security.ubuntu.com trusty-security/main Sources [162 kB]
+Get:24 http://security.ubuntu.com trusty-security/universe Sources [84.2 kB]
+Get:25 http://security.ubuntu.com trusty-security/main amd64 Packages [771 kB]
+Get:26 http://security.ubuntu.com trusty-security/universe amd64 Packages [262 kB]
+Get:27 http://security.ubuntu.com trusty-security/main Translation-en [415 kB]
+Get:28 http://security.ubuntu.com trusty-security/universe Translation-en [141 kB]
+Fetched 12.8 MB in 5s (2,513 kB/s)
+Reading package lists... Done
+root@ip-172-31-23-110:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Reading package lists... Done
+root@ip-172-31-23-110:~# sudo apt-get install software-properties-common
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+software-properties-common is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 18 not upgraded.
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# sudo apt-add-repository ppa:ansible/ansible
+ Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy. Avoid writing scripts or custom code to deploy and update your applications— automate in a language that approaches plain English, using SSH, with no agents to install on remote systems.
+
+http://ansible.com/
+ More info: https://launchpad.net/~ansible/+archive/ubuntu/ansible
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+
+gpg: keyring `/tmp/tmpwc9jgr85/secring.gpg' created
+gpg: keyring `/tmp/tmpwc9jgr85/pubring.gpg' created
+gpg: requesting key 7BB9C367 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpwc9jgr85/trustdb.gpg: trustdb created
+gpg: key 7BB9C367: public key "Launchpad PPA for Ansible, Inc." imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Hit http://security.ubuntu.com trusty-security InRelease
+Get:1 http://ppa.launchpad.net trusty InRelease [15.9 kB]
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Get:2 http://ppa.launchpad.net trusty/main amd64 Packages [509 B]
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Get:3 http://ppa.launchpad.net trusty/main Translation-en [326 B]
+Fetched 16.8 kB in 2s (6,997 B/s)
+Reading package lists... Done
+root@ip-172-31-23-110:~# sudo apt-get install ansible
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  libgmp10 python-crypto python-httplib2 python-jinja2 python-markupsafe
+  python-paramiko python-setuptools sshpass
+Suggested packages:
+  python-crypto-dbg python-crypto-doc python-jinja2-doc
+The following NEW packages will be installed:
+  ansible libgmp10 python-crypto python-httplib2 python-jinja2
+  python-markupsafe python-paramiko python-setuptools sshpass
+0 upgraded, 9 newly installed, 0 to remove and 18 not upgraded.
+Need to get 4,912 kB of archives.
+After this operation, 38.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libgmp10 amd64 2:5.1.3+dfsg-1ubuntu1 [218 kB]
+Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main python-markupsafe amd64 0.18-1build2 [14.3 kB]
+Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main python-jinja2 all 2.7.2-2 [161 kB]
+Get:4 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main python-crypto amd64 2.6.1-4ubuntu0.3 [239 kB]
+Get:5 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main python-paramiko all 1.10.1-1git1ubuntu0.1 [106 kB]
+Get:6 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main python-httplib2 all 0.8-2build1 [35.4 kB]
+Get:7 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main python-setuptools all 3.3-1ubuntu2 [230 kB]
+Get:8 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/universe sshpass amd64 1.05-1 [10.5 kB]
+Get:9 http://ppa.launchpad.net/ansible/ansible/ubuntu/ trusty/main ansible all 2.7.0-1ppa~trusty [3,898 kB]
+Fetched 4,912 kB in 2min 45s (29.7 kB/s)
+Selecting previously unselected package libgmp10:amd64.
+(Reading database ... 51306 files and directories currently installed.)
+Preparing to unpack .../libgmp10_2%3a5.1.3+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+Selecting previously unselected package python-markupsafe.
+Preparing to unpack .../python-markupsafe_0.18-1build2_amd64.deb ...
+Unpacking python-markupsafe (0.18-1build2) ...
+Selecting previously unselected package python-jinja2.
+Preparing to unpack .../python-jinja2_2.7.2-2_all.deb ...
+Unpacking python-jinja2 (2.7.2-2) ...
+Selecting previously unselected package python-crypto.
+Preparing to unpack .../python-crypto_2.6.1-4ubuntu0.3_amd64.deb ...
+Unpacking python-crypto (2.6.1-4ubuntu0.3) ...
+Selecting previously unselected package python-paramiko.
+Preparing to unpack .../python-paramiko_1.10.1-1git1ubuntu0.1_all.deb ...
+Unpacking python-paramiko (1.10.1-1git1ubuntu0.1) ...
+Selecting previously unselected package python-httplib2.
+Preparing to unpack .../python-httplib2_0.8-2build1_all.deb ...
+Unpacking python-httplib2 (0.8-2build1) ...
+Selecting previously unselected package python-setuptools.
+Preparing to unpack .../python-setuptools_3.3-1ubuntu2_all.deb ...
+Unpacking python-setuptools (3.3-1ubuntu2) ...
+Selecting previously unselected package sshpass.
+Preparing to unpack .../sshpass_1.05-1_amd64.deb ...
+Unpacking sshpass (1.05-1) ...
+Selecting previously unselected package ansible.
+Preparing to unpack .../ansible_2.7.0-1ppa~trusty_all.deb ...
+Unpacking ansible (2.7.0-1ppa~trusty) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+Setting up python-markupsafe (0.18-1build2) ...
+Setting up python-jinja2 (2.7.2-2) ...
+Setting up python-crypto (2.6.1-4ubuntu0.3) ...
+Setting up python-paramiko (1.10.1-1git1ubuntu0.1) ...
+Setting up python-httplib2 (0.8-2build1) ...
+Setting up python-setuptools (3.3-1ubuntu2) ...
+Setting up sshpass (1.05-1) ...
+Setting up ansible (2.7.0-1ppa~trusty) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.14) ...
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources [422 kB]
+Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources [6,322 B]
+Get:4 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources [213 kB]
+Get:5 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources [7,435 B]
+Get:6 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages [1,106 kB]
+Get:7 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.2 kB]
+Get:8 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages [492 kB]
+Get:9 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.6 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://ppa.launchpad.net trusty InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Fetched 2,344 kB in 2s (800 kB/s)
+Reading package lists... Done
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# adduser sree
+Adding user `sree' ...
+Adding new group `sree' (1001) ...
+Adding new user `sree' (1001) with group `sree' ...
+Creating home directory `/home/sree' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+Changing the user information for sree
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# visudo
+root@ip-172-31-23-110:~# vi /etc/ssh/sshd_config
+root@ip-172-31-23-110:~# visudo
+visudo: /etc/sudoers.tmp unchanged
+root@ip-172-31-23-110:~# vi /etc/ssh/sshd_config
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://ppa.launchpad.net trusty InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Reading package lists... Done
+root@ip-172-31-23-110:~# service ssh restart
+ssh stop/waiting
+ssh start/running, process 2188
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# visudo
+visudo: /etc/sudoers.tmp unchanged
+root@ip-172-31-23-110:~# service ssh restart
+ssh stop/waiting
+ssh start/running, process 2215
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# su sree
+sree@ip-172-31-23-110:/root$ apt-get install git
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+sree@ip-172-31-23-110:/root$ sudo apt-get install git
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 18 not upgraded.
+Need to get 3,394 kB of archives.
+After this operation, 22.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] n
+Abort.
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/sree/.ssh/id_rsa):
+Created directory '/home/sree/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/sree/.ssh/id_rsa.
+Your public key has been saved in /home/sree/.ssh/id_rsa.pub.
+The key fingerprint is:
+19:86:16:ac:ea:00:27:f9:58:9c:96:cd:f3:df:83:f0 sree@ip-172-31-23-110
+The key's randomart image is:
++--[ RSA 2048]----+
+|     ..          |
+|      .o         |
+| o = .o o        |
+|+ B =. . o       |
+|.B . o  S        |
+|o o   o          |
+| o     + o       |
+|  .     E o      |
+|           .     |
++-----------------+
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$ exit
+exit
+root@ip-172-31-23-110:~#
+root@ip-172-31-23-110:~# service ssh restart
+ssh stop/waiting
+ssh start/running, process 2261
+root@ip-172-31-23-110:~# service ssh restart
+ssh stop/waiting
+ssh start/running, process 2287
+root@ip-172-31-23-110:~# su sree
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$ ssh-copy-id 172.31.21.70
+The authenticity of host '172.31.21.70 (172.31.21.70)' can't be established.
+ECDSA key fingerprint is d0:fb:cb:13:1e:cb:1b:ec:86:af:01:38:d7:8e:0e:d4.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+sree@172.31.21.70's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh '172.31.21.70'"
+and check to make sure that only the key(s) you wanted were added.
+
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$
+sree@ip-172-31-23-110:/root$ cd
+sree@ip-172-31-23-110:~$
+sree@ip-172-31-23-110:~$ vi myhosts
+sree@ip-172-31-23-110:~$
+sree@ip-172-31-23-110:~$
+sree@ip-172-31-23-110:~$
+sree@ip-172-31-23-110:~$
+sree@ip-172-31-23-110:~$ ansible all -i myhosts -m ping
+172.31.21.70 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+sree@ip-172-31-23-110:~$
+sree@ip-172-31-23-110:~$ ansible all -i myhosts -b -m apt -a "name=git"
+172.31.21.70 | CHANGED => {
+    "cache_update_time": 1538674951,
+    "cache_updated": false,
+    "changed": true,
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following extra packages will be installed:\n  git-man liberror-perl\nSuggested packages:\n  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk\n  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn\nThe following NEW packages will be installed:\n  git git-man liberror-perl\n0 upgraded, 3 newly installed, 0 to remove and 18 not upgraded.\nNeed to get 3394 kB of archives.\nAfter this operation, 22.0 MB of additional disk space will be used.\nGet:1 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]\nGet:2 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.8 [701 kB]\nGet:3 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.8 [2672 kB]\nFetched 3394 kB in 0s (39.4 MB/s)\nSelecting previously unselected package liberror-perl.\n(Reading database ... 51306 files and directories currently installed.)\nPreparing to unpack .../liberror-perl_0.17-1.1_all.deb ...\nUnpacking liberror-perl (0.17-1.1) ...\nSelecting previously unselected package git-man.\nPreparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.8_all.deb ...\nUnpacking git-man (1:1.9.1-1ubuntu0.8) ...\nSelecting previously unselected package git.\nPreparing to unpack .../git_1%3a1.9.1-1ubuntu0.8_amd64.deb ...\nUnpacking git (1:1.9.1-1ubuntu0.8) ...\nProcessing triggers for man-db (2.6.7.1-1ubuntu1) ...\nSetting up liberror-perl (0.17-1.1) ...\nSetting up git-man (1:1.9.1-1ubuntu0.8) ...\nSetting up git (1:1.9.1-1ubuntu0.8) ...\n",
+    "stdout_lines": [
+        "Reading package lists...",
+        "Building dependency tree...",
+        "Reading state information...",
+        "The following extra packages will be installed:",
+        "  git-man liberror-perl",
+        "Suggested packages:",
+        "  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk",
+        "  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn",
+        "The following NEW packages will be installed:",
+        "  git git-man liberror-perl",
+        "0 upgraded, 3 newly installed, 0 to remove and 18 not upgraded.",
+        "Need to get 3394 kB of archives.",
+        "After this operation, 22.0 MB of additional disk space will be used.",
+        "Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]",
+        "Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.8 [701 kB]",
+        "Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.8 [2672 kB]",
+        "Fetched 3394 kB in 0s (39.4 MB/s)",
+        "Selecting previously unselected package liberror-perl.",
+        "(Reading database ... 51306 files and directories currently installed.)",
+        "Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...",
+        "Unpacking liberror-perl (0.17-1.1) ...",
+        "Selecting previously unselected package git-man.",
+        "Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.8_all.deb ...",
+        "Unpacking git-man (1:1.9.1-1ubuntu0.8) ...",
+        "Selecting previously unselected package git.",
+        "Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.8_amd64.deb ...",
+        "Unpacking git (1:1.9.1-1ubuntu0.8) ...",
+        "Processing triggers for man-db (2.6.7.1-1ubuntu1) ...",
+        "Setting up liberror-perl (0.17-1.1) ...",
+        "Setting up git-man (1:1.9.1-1ubuntu0.8) ...",
+        "Setting up git (1:1.9.1-1ubuntu0.8) ..."
+    ]
+}
+sree@ip-172-31-23-110:~$ ansible all -i myhosts -b -m apt -a "name=git"
+172.31.21.70 | SUCCESS => {
+    "cache_update_time": 1538674951,
+    "cache_updated": false,
+    "changed": false
+}
+sree@ip-172-31-23-110:~$ ansible all -i myhosts -b -m apt -a "apache2"
+ERROR! this task 'apt' has extra params, which is only allowed in the following modules: shell, win_shell, include_vars, add_host, raw, include_role, meta, set_fact, include, import_tasks, script, import_role, include_tasks, group_by, command, win_command
+sree@ip-172-31-23-110:~$ ansible all -i myhosts -b -m apt -a "name=apache2"
+172.31.21.70 | CHANGED => {
+    "cache_update_time": 1538674951,
+    "cache_updated": false,
+    "changed": true,
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following extra packages will be installed:\n  apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3\n  libaprutil1-ldap ssl-cert\nSuggested packages:\n  apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils\n  openssl-blacklist\nThe following NEW packages will be installed:\n  apache2 apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3\n  libaprutil1-ldap ssl-cert\n0 upgraded, 8 newly installed, 0 to remove and 18 not upgraded.\nNeed to get 1289 kB of archives.\nAfter this operation, 5368 kB of additional disk space will be used.\nGet:1 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]\nGet:2 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]\nGet:3 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]\nGet:4 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8634 B]\nGet:5 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.20 [845 kB]\nGet:6 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.20 [160 kB]\nGet:7 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.20 [87.5 kB]\nGet:8 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]\nPreconfiguring packages ...\nFetched 1289 kB in 0s (16.3 MB/s)\nSelecting previously unselected package libapr1:amd64.\n(Reading database ... 52056 files and directories currently installed.)\nPreparing to unpack .../libapr1_1.5.0-1_amd64.deb ...\nUnpacking libapr1:amd64 (1.5.0-1) ...\nSelecting previously unselected package libaprutil1:amd64.\nPreparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...\nUnpacking libaprutil1:amd64 (1.5.3-1) ...\nSelecting previously unselected package libaprutil1-dbd-sqlite3:amd64.\nPreparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...\nUnpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...\nSelecting previously unselected package libaprutil1-ldap:amd64.\nPreparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...\nUnpacking libaprutil1-ldap:amd64 (1.5.3-1) ...\nSelecting previously unselected package apache2-bin.\nPreparing to unpack .../apache2-bin_2.4.7-1ubuntu4.20_amd64.deb ...\nUnpacking apache2-bin (2.4.7-1ubuntu4.20) ...\nSelecting previously unselected package apache2-data.\nPreparing to unpack .../apache2-data_2.4.7-1ubuntu4.20_all.deb ...\nUnpacking apache2-data (2.4.7-1ubuntu4.20) ...\nSelecting previously unselected package apache2.\nPreparing to unpack .../apache2_2.4.7-1ubuntu4.20_amd64.deb ...\nUnpacking apache2 (2.4.7-1ubuntu4.20) ...\nSelecting previously unselected package ssl-cert.\nPreparing to unpack .../ssl-cert_1.0.33_all.deb ...\nUnpacking ssl-cert (1.0.33) ...\nProcessing triggers for man-db (2.6.7.1-1ubuntu1) ...\nProcessing triggers for ufw (0.34~rc-0ubuntu2) ...\nProcessing triggers for ureadahead (0.100.0-16) ...\nSetting up libapr1:amd64 (1.5.0-1) ...\nSetting up libaprutil1:amd64 (1.5.3-1) ...\nSetting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...\nSetting up libaprutil1-ldap:amd64 (1.5.3-1) ...\nSetting up apache2-bin (2.4.7-1ubuntu4.20) ...\nSetting up apache2-data (2.4.7-1ubuntu4.20) ...\nSetting up apache2 (2.4.7-1ubuntu4.20) ...\nEnabling module mpm_event.\nEnabling module authz_core.\nEnabling module authz_host.\nEnabling module authn_core.\nEnabling module auth_basic.\nEnabling module access_compat.\nEnabling module authn_file.\nEnabling module authz_user.\nEnabling module alias.\nEnabling module dir.\nEnabling module autoindex.\nEnabling module env.\nEnabling module mime.\nEnabling module negotiation.\nEnabling module setenvif.\nEnabling module filter.\nEnabling module deflate.\nEnabling module status.\nEnabling conf charset.\nEnabling conf localized-error-pages.\nEnabling conf other-vhosts-access-log.\nEnabling conf security.\nEnabling conf serve-cgi-bin.\nEnabling site 000-default.\n * Starting web server apache2\n * \nSetting up ssl-cert (1.0.33) ...\nProcessing triggers for libc-bin (2.19-0ubuntu6.14) ...\nProcessing triggers for ufw (0.34~rc-0ubuntu2) ...\nProcessing triggers for ureadahead (0.100.0-16) ...\n",
+    "stdout_lines": [
+        "Reading package lists...",
+        "Building dependency tree...",
+        "Reading state information...",
+        "The following extra packages will be installed:",
+        "  apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3",
+        "  libaprutil1-ldap ssl-cert",
+        "Suggested packages:",
+        "  apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils",
+        "  openssl-blacklist",
+        "The following NEW packages will be installed:",
+        "  apache2 apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3",
+        "  libaprutil1-ldap ssl-cert",
+        "0 upgraded, 8 newly installed, 0 to remove and 18 not upgraded.",
+        "Need to get 1289 kB of archives.",
+        "After this operation, 5368 kB of additional disk space will be used.",
+        "Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]",
+        "Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]",
+        "Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]",
+        "Get:4 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8634 B]",
+        "Get:5 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.20 [845 kB]",
+        "Get:6 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.20 [160 kB]",
+        "Get:7 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.20 [87.5 kB]",
+        "Get:8 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]",
+        "Preconfiguring packages ...",
+        "Fetched 1289 kB in 0s (16.3 MB/s)",
+        "Selecting previously unselected package libapr1:amd64.",
+        "(Reading database ... 52056 files and directories currently installed.)",
+        "Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...",
+        "Unpacking libapr1:amd64 (1.5.0-1) ...",
+        "Selecting previously unselected package libaprutil1:amd64.",
+        "Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...",
+        "Unpacking libaprutil1:amd64 (1.5.3-1) ...",
+        "Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.",
+        "Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...",
+        "Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...",
+        "Selecting previously unselected package libaprutil1-ldap:amd64.",
+        "Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...",
+        "Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...",
+        "Selecting previously unselected package apache2-bin.",
+        "Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.20_amd64.deb ...",
+        "Unpacking apache2-bin (2.4.7-1ubuntu4.20) ...",
+        "Selecting previously unselected package apache2-data.",
+        "Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.20_all.deb ...",
+        "Unpacking apache2-data (2.4.7-1ubuntu4.20) ...",
+        "Selecting previously unselected package apache2.",
+        "Preparing to unpack .../apache2_2.4.7-1ubuntu4.20_amd64.deb ...",
+        "Unpacking apache2 (2.4.7-1ubuntu4.20) ...",
+        "Selecting previously unselected package ssl-cert.",
+        "Preparing to unpack .../ssl-cert_1.0.33_all.deb ...",
+        "Unpacking ssl-cert (1.0.33) ...",
+        "Processing triggers for man-db (2.6.7.1-1ubuntu1) ...",
+        "Processing triggers for ufw (0.34~rc-0ubuntu2) ...",
+        "Processing triggers for ureadahead (0.100.0-16) ...",
+        "Setting up libapr1:amd64 (1.5.0-1) ...",
+        "Setting up libaprutil1:amd64 (1.5.3-1) ...",
+        "Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...",
+        "Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...",
+        "Setting up apache2-bin (2.4.7-1ubuntu4.20) ...",
+        "Setting up apache2-data (2.4.7-1ubuntu4.20) ...",
+        "Setting up apache2 (2.4.7-1ubuntu4.20) ...",
+        "Enabling module mpm_event.",
+        "Enabling module authz_core.",
+        "Enabling module authz_host.",
+        "Enabling module authn_core.",
+        "Enabling module auth_basic.",
+        "Enabling module access_compat.",
+        "Enabling module authn_file.",
+        "Enabling module authz_user.",
+        "Enabling module alias.",
+        "Enabling module dir.",
+        "Enabling module autoindex.",
+        "Enabling module env.",
+        "Enabling module mime.",
+        "Enabling module negotiation.",
+        "Enabling module setenvif.",
+        "Enabling module filter.",
+        "Enabling module deflate.",
+        "Enabling module status.",
+        "Enabling conf charset.",
+        "Enabling conf localized-error-pages.",
+        "Enabling conf other-vhosts-access-log.",
+        "Enabling conf security.",
+        "Enabling conf serve-cgi-bin.",
+        "Enabling site 000-default.",
+        " * Starting web server apache2",
+        " * ",
+        "Setting up ssl-cert (1.0.33) ...",
+        "Processing triggers for libc-bin (2.19-0ubuntu6.14) ...",
+        "Processing triggers for ufw (0.34~rc-0ubuntu2) ...",
+        "Processing triggers for ureadahead (0.100.0-16) ..."
+    ]
+}
+sree@ip-172-31-23-110:~$ ansible all -i myhosts -b -m apt -a "name=apache2"
+172.31.21.70 | SUCCESS => {
+    "cache_update_time": 1538674951,
+    "cache_updated": false,
+    "changed": false
+}
+sree@ip-172-31-23-110:~$ ansible all -i myhosts -b -m apt -a "name=git"
+172.31.21.70 | SUCCESS => {
+    "cache_update_time": 1538674951,
+    "cache_updated": false,
+    "changed": false
+}
+sree@ip-172-31-23-110:~$ ansible all -i myhosts -b -m apt -a "name=apache2"
+172.31.21.70 | SUCCESS => {
+    "cache_update_time": 1538674951,
+    "cache_updated": false,
+    "changed": false
+}
+sree@ip-172-31-23-110:~$

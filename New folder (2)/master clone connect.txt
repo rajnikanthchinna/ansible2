@@ -1,0 +1,167 @@
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ubuntu@ec2-13-229-80-151.ap-southeast-1.compute.amazonaws.com
+The authenticity of host 'ec2-13-229-80-151.ap-southeast-1.compute.amazonaws.com (13.229.80.151)' can't be established.
+ECDSA key fingerprint is SHA256:3sC5Z0w2D2KlpU1n/s+BLycao+HAcDBYIO/mWyso/YY.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-13-229-80-151.ap-southeast-1.compute.amazonaws.com,13.229.80.151' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Oct  7 08:10:09 UTC 2018
+
+  System load: 0.0               Memory usage: 5%   Processes:       81
+  Usage of /:  12.1% of 7.74GB   Swap usage:   0%   Users logged in: 0
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+New release '16.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sun Oct  7 05:26:30 2018 from 27.6.76.251
+ubuntu@ip-172-31-28-83:~$ sudo -i
+root@ip-172-31-28-83:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources [422 kB]
+Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources [6,322 B]
+Get:4 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources [213 kB]
+Get:5 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources [7,435 B]
+Get:6 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages [1,106 kB]
+Get:7 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.2 kB]
+Get:8 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages [492 kB]
+Get:9 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.6 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://ppa.launchpad.net trusty InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Fetched 2,344 kB in 3s (774 kB/s)
+Reading package lists... Done
+root@ip-172-31-28-83:~# ls
+myhosts
+root@ip-172-31-28-83:~# cd myhosys
+-bash: cd: myhosys: No such file or directory
+root@ip-172-31-28-83:~# cd myhosts
+-bash: cd: myhosts: Not a directory
+root@ip-172-31-28-83:~# ls
+myhosts
+root@ip-172-31-28-83:~# cat myhosts
+172.31.25.84
+root@ip-172-31-28-83:~# su mani
+mani@ip-172-31-28-83:/root$ cd
+mani@ip-172-31-28-83:~$ git clone https://github.com/rajnikanthchinna/ansible.git
+fatal: destination path 'ansible' already exists and is not an empty directory.
+mani@ip-172-31-28-83:~$ ls
+ansible  myhosts
+mani@ip-172-31-28-83:~$ cd ansible
+mani@ip-172-31-28-83:~/ansible$ git pull
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 8 (delta 1), reused 8 (delta 1), pack-reused 0
+Unpacking objects: 100% (8/8), done.
+From https://github.com/rajnikanthchinna/ansible
+   40939e9..49d8575  master     -> origin/master
+Updating 40939e9..49d8575
+Fast-forward
+ chinna.yml               | 10 ----------
+ insjavonubuntu.yml       | 15 +++++++++++++++
+ myhosts                  |  1 -
+ myhosts.yml              |  1 +
+ multi.yml => myloops.yml |  2 +-
+ myping.yml               | 10 ----------
+ mysofws.yml              | 17 +++++++++++++++++
+ ping.yml                 |  0
+ 8 files changed, 34 insertions(+), 22 deletions(-)
+ delete mode 100644 chinna.yml
+ create mode 100644 insjavonubuntu.yml
+ delete mode 100644 myhosts
+ create mode 100644 myhosts.yml
+ rename multi.yml => myloops.yml (79%)
+ delete mode 100644 myping.yml
+ create mode 100644 mysofws.yml
+ delete mode 100644 ping.yml
+mani@ip-172-31-28-83:~/ansible$ ansible-playbook -i myhosts multi.yml
+ERROR! the playbook: multi.yml could not be found
+mani@ip-172-31-28-83:~/ansible$ ansible-playbook -i myhosts mysofws.yml
+ [WARNING]: Unable to parse /home/mani/ansible/myhosts as an inventory source
+
+ [WARNING]: No inventory was parsed, only implicit localhost is available
+
+ [WARNING]: provided hosts list is empty, only localhost is available. Note
+that the implicit localhost does not match 'all'
+
+
+PLAY [all] *********************************************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+mani@ip-172-31-28-83:~/ansible$ vi myhosts
+mani@ip-172-31-28-83:~/ansible$ ansible-playbook -i myhosts mysofws.yml
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [172.31.25.84]
+
+TASK [install git] *************************************************************
+ok: [172.31.25.84]
+
+TASK [install tree] ************************************************************
+changed: [172.31.25.84]
+
+TASK [install wget] ************************************************************
+ok: [172.31.25.84]
+
+PLAY RECAP *********************************************************************
+172.31.25.84               : ok=4    changed=1    unreachable=0    failed=0
+
+mani@ip-172-31-28-83:~/ansible$

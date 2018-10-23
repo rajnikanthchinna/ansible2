@@ -1,0 +1,312 @@
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ubuntu@ec2-54-255-153-230.ap-southeast-1.compute.amazonaw                    s.com
+The authenticity of host 'ec2-54-255-153-230.ap-southeast-1.compute.amazonaws.co                    m (54.255.153.230)' can't be established.
+ECDSA key fingerprint is SHA256:9m/X7QlLI501m68bZDYJNQ0A5jViDE0KFNtUcvgVEEM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-54-255-153-230.ap-southeast-1.compute.amazonaws.                    com,54.255.153.230' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Wed Oct 10 06:27:15 UTC 2018
+
+  System load: 0.0               Memory usage: 5%   Processes:       82
+  Usage of /:  13.3% of 7.74GB   Swap usage:   0%   Users logged in: 0
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+Last login: Mon Oct  8 07:36:04 2018 from 157.48.142.48
+syubuntu@ip-172-31-18-2:~$ sudo -i
+root@ip-172-31-18-2:~# su kiran
+kiran@ip-172-31-18-2:/root$ cd
+kiran@ip-172-31-18-2:~$ ls
+ansible  myhosts
+kiran@ip-172-31-18-2:~$ cd ansible
+kiran@ip-172-31-18-2:~/ansible$ ls
+group_vars            javaonuandred.yml  myloops.yml          README.md
+insjavonubuntu.retry  myhosts            mysofws.yml          webserver.yml
+insjavonubuntu.yml    myhosts.yml        myvarswithdebug.yml
+kiran@ip-172-31-18-2:~/ansible$ ansible-galaxy init mytom7installrole
+- mytom7installrole was created successfully
+kiran@ip-172-31-18-2:~/ansible$ tree
+The program 'tree' is currently not installed. To run 'tree' please ask your adm                    inistrator to install the package 'tree'
+kiran@ip-172-31-18-2:~/ansible$ tree mytom7installrole
+The program 'tree' is currently not installed. To run 'tree' please ask your adm                    inistrator to install the package 'tree'
+kiran@ip-172-31-18-2:~/ansible$ tree mytom7installrolecd
+The program 'tree' is currently not installed. To run 'tree' please ask your adm                    inistrator to install the package 'tree'
+kiran@ip-172-31-18-2:~/ansible$ cd
+kiran@ip-172-31-18-2:~$ sudo apt-get tree
+E: Invalid operation tree
+kiran@ip-172-31-18-2:~$ sudo apt-get install tree
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  tree
+0 upgraded, 1 newly installed, 0 to remove and 21 not upgraded.
+Need to get 37.8 kB of archives.
+After this operation, 109 kB of additional disk space will be used.
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com/ubuntu/ trusty/universe tree                     amd64 1.6.0-1 [37.8 kB]
+Fetched 37.8 kB in 0s (0 B/s)
+Selecting previously unselected package tree.
+(Reading database ... 56076 files and directories currently installed.)
+Preparing to unpack .../tree_1.6.0-1_amd64.deb ...
+Unpacking tree (1.6.0-1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up tree (1.6.0-1) ...
+kiran@ip-172-31-18-2:~$ tree
+.
++-- ansible
+¦   +-- group_vars
+¦   ¦   +-- webservers
+¦   +-- insjavonubuntu.retry
+¦   +-- insjavonubuntu.yml
+¦   +-- javaonuandred.yml
+¦   +-- myhosts
+¦   +-- myhosts.yml
+¦   +-- myloops.yml
+¦   +-- mysofws.yml
+¦   +-- mytom7installrole
+¦   ¦   +-- defaults
+¦   ¦   ¦   +-- main.yml
+¦   ¦   +-- files
+¦   ¦   +-- handlers
+¦   ¦   ¦   +-- main.yml
+¦   ¦   +-- meta
+¦   ¦   ¦   +-- main.yml
+¦   ¦   +-- README.md
+¦   ¦   +-- tasks
+¦   ¦   ¦   +-- main.yml
+¦   ¦   +-- templates
+¦   ¦   +-- tests
+¦   ¦   ¦   +-- inventory
+¦   ¦   ¦   +-- test.yml
+¦   ¦   +-- vars
+¦   ¦       +-- main.yml
+¦   +-- myvarswithdebug.yml
+¦   +-- README.md
+¦   +-- webserver.yml
++-- myhosts
+
+11 directories, 20 files
+kiran@ip-172-31-18-2:~$ ls
+ansible  myhosts
+kiran@ip-172-31-18-2:~$ cd ansible
+kiran@ip-172-31-18-2:~/ansible$ git add -A
+kiran@ip-172-31-18-2:~/ansible$ git commit -m "tomcat"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <kiran@ip-172-31-18-2.ap-southeast-1.compute.intern                    al>) not allowed
+kiran@ip-172-31-18-2:~/ansible$ git config --global user.email "you@example.com"                    kiran@ip-172-31-18-2:~/ansible$ git config --global user.email "rajnikanthchinna@gmail.com"         kiran@ip-172-31-18-2:~/ansible$ git config --global user.name "rajnikanth"
+kiran@ip-172-31-18-2:~/ansible$ git commit -m "tomcat"
+[master e6955f2] tomcat
+ 10 files changed, 117 insertions(+)
+ create mode 100644 insjavonubuntu.retry
+ create mode 100644 myhosts
+ create mode 100644 mytom7installrole/README.md
+ create mode 100644 mytom7installrole/defaults/main.yml
+ create mode 100644 mytom7installrole/handlers/main.yml
+ create mode 100644 mytom7installrole/meta/main.yml
+ create mode 100644 mytom7installrole/tasks/main.yml
+ create mode 100644 mytom7installrole/tests/inventory
+ create mode 100644 mytom7installrole/tests/test.yml
+ create mode 100644 mytom7installrole/vars/main.yml
+kiran@ip-172-31-18-2:~/ansible$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com':
+Password for 'https://github.com':
+remote: Anonymous access to rajnikanthchinna/ansible.git denied.
+fatal: Authentication failed for 'https://github.com/rajnikanthchinna/ansible.git/'
+kiran@ip-172-31-18-2:~/ansible$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': rajnikanthchinna@gmail.com
+Password for 'https://rajnikanthchinna@gmail.com@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/rajnikanthchinna/ansible.git/'
+kiran@ip-172-31-18-2:~/ansible$ git commit -m "tomcat"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+kiran@ip-172-31-18-2:~/ansible$ ls
+group_vars            javaonuandred.yml  myloops.yml        myvarswithdebug.yml
+insjavonubuntu.retry  myhosts            mysofws.yml        README.md
+insjavonubuntu.yml    myhosts.yml        mytom7installrole  webserver.yml
+kiran@ip-172-31-18-2:~/ansible$ cd mytom7installrole
+kiran@ip-172-31-18-2:~/ansible/mytom7installrole$ ls
+defaults  files  handlers  meta  README.md  tasks  templates  tests  vars
+kiran@ip-172-31-18-2:~/ansible/mytom7installrole$ cd
+kiran@ip-172-31-18-2:~$
+kiran@ip-172-31-18-2:~$
+kiran@ip-172-31-18-2:~$ ls
+ansible  myhosts
+kiran@ip-172-31-18-2:~$ cd ansible
+kiran@ip-172-31-18-2:~/ansible$
+kiran@ip-172-31-18-2:~/ansible$ git add -A
+kiran@ip-172-31-18-2:~/ansible$ git commit -m "mytomcat"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+kiran@ip-172-31-18-2:~/ansible$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': rajnikanth
+Password for 'https://rajnikanth@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/rajnikanthchinna/ansible.git/'
+kiran@ip-172-31-18-2:~/ansible$ git commit -m "mytomcat"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+kiran@ip-172-31-18-2:~/ansible$ git add -A
+kiran@ip-172-31-18-2:~/ansible$ git commit -m "mytomcat"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+kiran@ip-172-31-18-2:~/ansible$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': rajnikanthchinna
+Password for 'https://rajnikanthchinna@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/rajnikanthchinna/ansible.git/'
+kiran@ip-172-31-18-2:~/ansible$ git add -A
+kiran@ip-172-31-18-2:~/ansible$ git commit -m "mytomcat"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+kiran@ip-172-31-18-2:~/ansible$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': rajnikanthchinna
+Password for 'https://rajnikanthchinna@github.com':
+Counting objects: 20, done.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (19/19), 2.71 KiB | 0 bytes/s, done.
+Total 19 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rajnikanthchinna/ansible.git
+   2bce588..e6955f2  master -> master
+kiran@ip-172-31-18-2:~/ansible$ ^C
+kiran@ip-172-31-18-2:~/ansible$

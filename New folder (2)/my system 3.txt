@@ -1,0 +1,111 @@
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git add -A
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git commit -m
+error: switch `m' requires a value
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git commit -m "mydhoni"
+[master 198745f] mydhoni
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 267 bytes | 133.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rajnikanthchinna/ansible.git
+   84d5346..198745f  master -> master
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git add -A
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git commit -m "chinna"
+[master 63249a1] chinna
+ 1 file changed, 1 insertion(+)
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rajnikanthchinna/ansible.git
+   198745f..63249a1  master -> master
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git add -A
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git commit -m "small"
+[master 96d0438] small
+ 1 file changed, 10 insertions(+)
+ create mode 100644 chinna.yml
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 359 bytes | 179.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rajnikanthchinna/ansible.git
+   63249a1..96d0438  master -> master
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git add -A
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git commit -m "varun"
+[master 40939e9] varun
+ 1 file changed, 12 insertions(+)
+ create mode 100644 multi.yml
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 372 bytes | 186.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rajnikanthchinna/ansible.git
+   96d0438..40939e9  master -> master
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files/ansible (master)

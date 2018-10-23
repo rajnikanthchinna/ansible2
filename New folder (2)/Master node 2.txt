@@ -1,0 +1,306 @@
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ubuntu@ec2-13-250-121-79.ap-southeast-1.compute.amazonaws.com
+The authenticity of host 'ec2-13-250-121-79.ap-southeast-1.compute.amazonaws.com (13.250.121.79)' can't be established.
+ECDSA key fingerprint is SHA256:oWVdAfIXMUjzXAsT34RmZuZIWvTAUnV5cMDCTDZI5Ec.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-13-250-121-79.ap-southeast-1.compute.amazonaws.com,13.250.121.79' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Oct  6 05:45:37 UTC 2018
+
+  System load: 0.0               Memory usage: 5%   Processes:       81
+  Usage of /:  10.2% of 7.74GB   Swap usage:   0%   Users logged in: 0
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+ubuntu@ip-172-31-20-115:~$ sudo -i
+root@ip-172-31-20-115:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Get:1 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Get:2 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources [422 kB]
+Get:3 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources [6,322 B]
+Get:4 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources [213 kB]
+Get:5 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources [7,435 B]
+Get:6 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages [1,106 kB]
+Get:7 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.2 kB]
+Get:8 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages [492 kB]
+Get:9 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.6 kB]
+Get:10 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en [551 kB]
+Get:11 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en [7,616 B]
+Get:12 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en [4,021 B]
+Get:13 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en [262 kB]
+Get:14 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources [9,709 B]
+Get:15 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+Get:16 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources [35.4 kB]
+Get:17 http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources [1,896 B]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Get:18 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:19 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:20 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:21 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:22 http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Get:23 http://security.ubuntu.com trusty-security/main Sources [163 kB]
+Get:24 http://security.ubuntu.com trusty-security/universe Sources [84.2 kB]
+Get:25 http://security.ubuntu.com trusty-security/main amd64 Packages [771 kB]
+Get:26 http://security.ubuntu.com trusty-security/universe amd64 Packages [262 kB]
+Get:27 http://security.ubuntu.com trusty-security/main Translation-en [415 kB]
+Get:28 http://security.ubuntu.com trusty-security/universe Translation-en [141 kB]
+Fetched 12.8 MB in 4s (2,612 kB/s)
+Reading package lists... Done
+root@ip-172-31-20-115:~# adduser dhoni
+Adding user `dhoni' ...
+Adding new group `dhoni' (1001) ...
+Adding new user `dhoni' (1001) with group `dhoni' ...
+Creating home directory `/home/dhoni' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+Changing the user information for dhoni
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+root@ip-172-31-20-115:~# visudo
+root@ip-172-31-20-115:~# vi /etc/ssh/sshd_config
+root@ip-172-31-20-115:~# serivce ssh restart
+No command 'serivce' found, did you mean:
+ Command 'service' from package 'sysvinit-utils' (main)
+serivce: command not found
+root@ip-172-31-20-115:~# sevice ssh restart
+No command 'sevice' found, did you mean:
+ Command 'service' from package 'sysvinit-utils' (main)
+sevice: command not found
+root@ip-172-31-20-115:~# service ssh restart
+ssh stop/waiting
+ssh start/running, process 1457
+root@ip-172-31-20-115:~# service ssh restart
+ssh stop/waiting
+ssh start/running, process 1484
+root@ip-172-31-20-115:~# Connection reset by 13.250.121.79 port 22
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ubuntu@ec2-13-250-121-79.ap-southeast-1.compute.amazonaws.com
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Oct  6 06:17:25 UTC 2018
+
+  System load:  0.0               Processes:           102
+  Usage of /:   10.7% of 7.74GB   Users logged in:     1
+  Memory usage: 6%                IP address for eth0: 172.31.20.115
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+New release '16.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sat Oct  6 05:51:27 2018 from 60.243.162.71
+ubuntu@ip-172-31-20-115:~$ sudo -i
+root@ip-172-31-20-115:~# apt-get update
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports InRelease
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release.gpg
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty Release
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Sources
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://ap-southeast-1.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:2 http://security.ubuntu.com trusty-security/main Sources [163 kB]
+Get:3 http://security.ubuntu.com trusty-security/universe Sources [84.2 kB]
+Get:4 http://security.ubuntu.com trusty-security/main amd64 Packages [771 kB]
+Get:5 http://security.ubuntu.com trusty-security/universe amd64 Packages [262 kB]
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Fetched 1,345 kB in 3s (346 kB/s)
+Reading package lists... Done
+root@ip-172-31-20-115:~# git --version
+git version 1.9.1
+root@ip-172-31-20-115:~# apache2 --version
+[Sat Oct 06 06:22:01.930587 2018] [core:warn] [pid 4610] AH00111: Config variable ${APACHE_LOCK_DIR} is not defined
+[Sat Oct 06 06:22:01.930862 2018] [core:warn] [pid 4610] AH00111: Config variable ${APACHE_PID_FILE} is not defined
+[Sat Oct 06 06:22:01.930939 2018] [core:warn] [pid 4610] AH00111: Config variable ${APACHE_RUN_USER} is not defined
+[Sat Oct 06 06:22:01.931003 2018] [core:warn] [pid 4610] AH00111: Config variable ${APACHE_RUN_GROUP} is not defined
+[Sat Oct 06 06:22:01.931068 2018] [core:warn] [pid 4610] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Sat Oct 06 06:22:01.932850 2018] [core:warn] [pid 4610:tid 140526377207680] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Sat Oct 06 06:22:01.933004 2018] [core:warn] [pid 4610:tid 140526377207680] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Sat Oct 06 06:22:01.933050 2018] [core:warn] [pid 4610:tid 140526377207680] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+AH00526: Syntax error on line 74 of /etc/apache2/apache2.conf:
+Invalid Mutex directory in argument file:${APACHE_LOCK_DIR}
+root@ip-172-31-20-115:~# apache2 -version
+Server version: Apache/2.4.7 (Ubuntu)
+Server built:   Apr 18 2018 15:36:26
+root@ip-172-31-20-115:~# Connection reset by 13.250.121.79 port 22
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/Devops Pem files
+$ ssh -i "ansible.pem" ubuntu@ec2-13-250-121-79.ap-southeast-1.compute.amazonaws.com
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-158-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Oct  6 06:21:35 UTC 2018
+
+  System load:  0.0               Processes:           102
+  Usage of /:   11.0% of 7.74GB   Users logged in:     1
+  Memory usage: 7%                IP address for eth0: 172.31.20.115
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+New release '16.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sat Oct  6 06:18:20 2018 from 60.243.162.71
+ubuntu@ip-172-31-20-115:~$ sudo -i
+root@ip-172-31-20-115:~# git --version
+git version 1.9.1
+root@ip-172-31-20-115:~# apt-get remove git
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  git-man liberror-perl
+Use 'apt-get autoremove' to remove them.
+The following packages will be REMOVED:
+  git
+0 upgraded, 0 newly installed, 1 to remove and 21 not upgraded.
+After this operation, 20.6 MB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 52699 files and directories currently installed.)
+Removing git (1:1.9.1-1ubuntu0.8) ...
+root@ip-172-31-20-115:~# git --version
+git version 1.9.1
+root@ip-172-31-20-115:~# tree --version
+tree v1.6.0 (c) 1996 - 2011 by Steve Baker, Thomas Moore, Francesc Rocher, Kyosuke Tokoro
+root@ip-172-31-20-115:~# wget -version
+wget: Invalid --execute command ‘rsion’
+root@ip-172-31-20-115:~# wget --version
+GNU Wget 1.15 built on linux-gnu.
+
++digest +https +ipv6 +iri +large-file +nls +ntlm +opie +ssl/openssl
+
+Wgetrc:
+    /etc/wgetrc (system)
+Locale:
+    /usr/share/locale
+Compile:
+    gcc -DHAVE_CONFIG_H -DSYSTEM_WGETRC="/etc/wgetrc"
+    -DLOCALEDIR="/usr/share/locale" -I. -I../../src -I../lib
+    -I../../lib -D_FORTIFY_SOURCE=2 -I/usr/include -g -O2
+    -fstack-protector --param=ssp-buffer-size=4 -Wformat
+    -Werror=format-security -DNO_SSLv2 -D_FILE_OFFSET_BITS=64 -g -Wall
+Link:
+    gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat
+    -Werror=format-security -DNO_SSLv2 -D_FILE_OFFSET_BITS=64 -g -Wall
+    -Wl,-Bsymbolic-functions -Wl,-z,relro -L/usr/lib -lssl -lcrypto
+    -ldl -lz -lidn -luuid ftp-opie.o openssl.o http-ntlm.o
+    ../lib/libgnu.a
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later
+<http://www.gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Originally written by Hrvoje Niksic <hniksic@xemacs.org>.
+Please send bug reports and questions to <bug-wget@gnu.org>.
+root@ip-172-31-20-115:~# ^C
+root@ip-172-31-20-115:~# ^C
+root@ip-172-31-20-115:~#

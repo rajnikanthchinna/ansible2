@@ -1,0 +1,706 @@
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ echo "# mygit" >> README.md
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git init
+Initialized empty Git repository in C:/Users/Chetan/Desktop/mygit/.git/
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git commit -m "first commit"
+[master (root-commit) 16b0e17] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git remote add origin https://github.com/rajnikanthchinna/mygit.git
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 221 bytes | 110.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/rajnikanthchinna/mygit/pull/new/master
+remote:
+To https://github.com/rajnikanthchinna/mygit.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git checkout -b B
+Switched to a new branch 'B'
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ vi b
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ git add -A
+warning: LF will be replaced by CRLF in b.
+The file will have its original line endings in your working directory
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ git commit -m " in B branch "
+[B cb8ddd6]  in B branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ ls
+README.md
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ vi mas1
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git add -A
+warning: LF will be replaced by CRLF in mas1.
+The file will have its original line endings in your working directory
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git commit -m " first commit of master"
+[master 742637b]  first commit of master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mas1
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ vi mas2
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git add -A
+warning: LF will be replaced by CRLF in mas2.
+The file will have its original line endings in your working directory
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git commit -m " 2nd commit of master"
+[master 6ae1ba1]  2nd commit of master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mas2
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git log
+commit 6ae1ba16ed5dd2071e7d74fb5f484519b22ea74a (HEAD -> master)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:50:05 2018 +0530
+
+     2nd commit of master
+
+commit 742637b02dd3f1bdc275003f2a9a65fa5605ac14
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:49:15 2018 +0530
+
+     first commit of master
+
+commit 16b0e172d9b68e3ad78c7b31a141024e0cd00528 (origin/master)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:45:56 2018 +0530
+
+    first commit
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (master)
+$ git checkout  B
+Switched to branch 'B'
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ git log
+commit cb8ddd604e75107636d9cbb6a0453166a73d0f7a (HEAD -> B)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:48:13 2018 +0530
+
+     in B branch
+
+commit 16b0e172d9b68e3ad78c7b31a141024e0cd00528 (origin/master)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:45:56 2018 +0530
+
+    first commit
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying:  in B branch
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ git log
+commit a40152777654a314cb8bbf3fd5675ef574b5d597 (HEAD -> B)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:48:13 2018 +0530
+
+     in B branch
+
+commit 6ae1ba16ed5dd2071e7d74fb5f484519b22ea74a (master)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:50:05 2018 +0530
+
+     2nd commit of master
+
+commit 742637b02dd3f1bdc275003f2a9a65fa5605ac14
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:49:15 2018 +0530
+
+     first commit of master
+
+commit 16b0e172d9b68e3ad78c7b31a141024e0cd00528 (origin/master)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:45:56 2018 +0530
+
+    first commit
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ git log
+commit a40152777654a314cb8bbf3fd5675ef574b5d597 (HEAD -> B)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:48:13 2018 +0530
+
+     in B branch
+
+commit 6ae1ba16ed5dd2071e7d74fb5f484519b22ea74a (master)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:50:05 2018 +0530
+
+     2nd commit of master
+
+commit 742637b02dd3f1bdc275003f2a9a65fa5605ac14
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:49:15 2018 +0530
+
+     first commit of master
+
+commit 16b0e172d9b68e3ad78c7b31a141024e0cd00528 (origin/master)
+Author: rajnikanthchinna <rajnikanthchinna12@gmail.com>
+Date:   Sat Oct 27 11:45:56 2018 +0530
+
+    first commit
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$ history
+   26  ssh -i "ansible.pem" ec2-user@ec2-52-221-193-148.ap-southeast-1.compute.a                                                                                        mazonaws.com
+   27  sudo -i
+   28  ssh -i "ansible.pem" ec2-user@ec2-18-136-200-157.ap-southeast-1.compute.a                                                                                        mazonaws.com
+   29  ssh -i "ansible.pem" ubuntu@ec2-3-0-90-143.ap-southeast-1.compute.amazona                                                                                        ws.com
+   30  ssh -i "ansible.pem" ubuntu@ec2-54-169-204-159.ap-southeast-1.compute.ama                                                                                        zonaws.com
+   31  echo "# ansible2" >> README.md
+   32  git init
+   33  git add README.md
+   34  git commit -m "first commit"
+   35  git remote add origin https://github.com/rajnikanthchinna/ansible2.git
+   36  git push -u origin master
+   37  git add -A
+   38  git pull
+   39  ssh -i "ansible.pem" ubuntu@ec2-18-136-105-174.ap-southeast-1.compute.ama                                                                                        zonaws.com
+   40  ssh -i "ansible.pem" ubuntu@ec2-18-136-105-174.ap-southeast-1.compute.ama                                                                                        zonaws.com
+   41  ssh -i "ansible.pem" ubuntu@ec2-18-136-105-174.ap-southeast-1.compute.ama                                                                                        zonaws.com
+   42  ssh -i "ansible.pem" ubuntu@ec2-54-255-190-129.ap-southeast-1.compute.ama                                                                                        zonaws.com
+   43  ssh -i "ansible.pem" ec2-user@ec2-3-0-104-230.ap-southeast-1.compute.amaz                                                                                        onaws.com
+   44  ssh -i "ansible.pem" ubuntu@ec2-3-0-90-16.ap-southeast-1.compute.amazonaw                                                                                        s.com
+   45  ssh -i "ansible.pem" ec2-user@ec2-13-250-12-11.ap-southeast-1.compute.ama                                                                                        zonaws.com
+   46  ssh -i "ansible.pem" ec2-user@ec2-54-169-195-217.ap-southeast-1.compute.a                                                                                        mazonaws.com
+   47  ssh -i "ansible.pem" ec2-user@ec2-54-169-133-135.ap-southeast-1.compute.a                                                                                        mazonaws.com
+   48  ssh -i "ansible.pem" ec2-user@ec2-52-221-240-158.ap-southeast-1.compute.a                                                                                        mazonaws.com
+   49  ssh -i "ansible.pem" ec2-user@ec2-52-221-240-158.ap-southeast-1.compute.a                                                                                        mazonaws.com
+   50  ssh -i "ansible.pem" ubuntu@ec2-18-136-201-77.ap-southeast-1.compute.amaz                                                                                        onaws.com
+   51  ssh -i "ansible.pem" ec2-user@ec2-54-169-133-135.ap-southeast-1.compute.a                                                                                        mazonaws.com
+   52  ssh -i "ansible.pem" ubuntu@ec2-54-169-11-242.ap-southeast-1.compute.amaz                                                                                        onaws.com
+   53  ssh -i "ansible.pem" ubuntu@ec2-52-221-215-14.ap-southeast-1.compute.amaz                                                                                        onaws.com
+   54  Ins
+   55  Ins
+   56  ssh -i "ansible.pem" ec2-user@ec2-13-250-36-109.ap-southeast-1.compute.am                                                                                        azonaws.com
+   57  ssh -i "ansible.pem" ubuntu@ec2-3-0-95-143.ap-southeast-1.compute.amazona                                                                                        ws.com
+   58  ssh -i "ansible.pem" ec2-user@ec2-3-0-57-29.ap-southeast-1.compute.amazon                                                                                        aws.com
+   59  ssh -i "ansible.pem" ec2-user@ec2-3-0-57-29.ap-southeast-1.compute.amazon                                                                                        aws.com
+   60  git clone
+   61  https://github.com/rajnikanthchinna/git-.git
+   62  https://github.com/rajnikanthchinna/git-.git
+   63  cd D:
+   64  ls
+   65  vi sample
+   66  git pull
+   67  ls
+   68  git add -A
+   69  git clone
+   70  git add -A
+   71  ssh -i "ansible.pem" ubuntu@ec2-3-0-56-115.ap-southeast-1.compute.amazona                                                                                        ws.com
+   72  git clone
+   73  https://github.com/rajnikanthchinna/git.git
+   74  git pull
+   75  ls
+   76  ssh -i "ansible.pem" ubuntu@ec2-13-250-106-133.ap-southeast-1.compute.ama                                                                                        zonaws.com
+   77  ssh -i "ansible.pem" ubuntu@ec2-13-250-106-133.ap-southeast-1.compute.ama                                                                                        zonaws.com
+   78  git clone
+   79  https://github.com/rajnikanthchinna/git.git
+   80  ls
+   81  vi simple
+   82  git pull
+   83  ls
+   84  git add -A
+   85  git commit -m
+   86  git commit -m "chinna"
+   87  git clone
+   88  git clone https://github.com/rajnikanthchinna/git.git
+   89  ls
+   90  cd git
+   91  ls
+   92  vi simple
+   93  git add -A
+   94  git commit -m "chinna"
+   95  git push
+   96  mkdir SBH Home
+   97  ls
+   98  echo "# SHB" >> README.md
+   99  git init
+  100  git add README.md
+  101  git commit -m "first commit"
+  102  git remote add origin https://github.com/rajnikanthchinna/SHB.git
+  103  git push -u origin master
+  104  ls
+  105  cd SBH/
+  106  ls
+  107  vi master
+  108  ls
+  109  git add -A
+  110  gir commit -m "sbhm"
+  111  git commit -m "sbhm"
+  112  git push
+  113  vi master
+  114  git checkout -b UAT
+  115  vi UAT
+  116  git add -A
+  117  git commit -m "UAT"
+  118  git push
+  119  git push origin UAT
+  120  ls
+  121  cd
+  122  ls
+  123  cd sbh
+  124  cd master
+  125  git checkout master
+  126  git checkout uat
+  127  git checkout UAT
+  128  git checkout -b UAT
+  129  git checkout master
+  130  ls
+  131  cd Desktop/
+  132  ls
+  133  cd SBH/
+  134  ls
+  135  git checkout sbh
+  136  git checkout SBH
+  137  git checkout -b SIT
+  138  vi SIT
+  139  git add -A
+  140  git commit -m "SIT"
+  141  git push origin SIT
+  142  git checkout -b sprint1
+  143  vi sprint1
+  144  git add -
+  145  git add -A
+  146  git commit -m "sprint1"
+  147  git push
+  148  git push origin sprint1
+  149  git checkout sit
+  150  git checkout SIT
+  151  git checkout UAT
+  152  git checkout SIT
+  153  git checkout master
+  154  git checkout sir
+  155  git checkout SIt
+  156  git checkout -b sprint2
+  157  vi sprint2
+  158  ls
+  159  git add -
+  160  git add -A
+  161  git commit -m "sprint2"
+  162  git push
+  163  git push origin sprint2
+  164  git checkout SIT
+  165  git merge sprint2
+  166  ls
+  167  git merge sprint1
+  168  ls
+  169  git checkout UAT
+  170  git merge SIT
+  171  gti add -A
+  172  git add -A
+  173  git commit -m "git"
+  174  git commit -m "UAT"
+  175  git push origin UAT
+  176  git checkout master
+  177  git branches
+  178  git branch
+  179  git tag SBH_R_V2.0
+  180  ls
+  181  git tag
+  182  git checkout SBH_R_V2.0
+  183  git push origin SBH_R_V2.0
+  184  git cat-file -t527f1aa1b00b303b9de591d9edb48a43b10dc45a
+  185  git cat-file -t 527f1aa1b00b303b9de591d9edb48a43b10dc45a
+  186  git cat-file -p 527f1aa1b00b303b9de591d9edb48a43b10dc45a
+  187  git cat-file -s 527f1aa1b00b303b9de591d9edb48a43b10dc45a
+  188  git cat-file -e 527f1aa1b00b303b9de591d9edb48a43b10dc45a
+  189  exit
+  190  ls
+  191  echo "# git1" >> README.md
+  192  git init
+  193  git add README.md
+  194  git commit -m "first commit"
+  195  git remote add origin https://github.com/rajnikanthchinna/git1.git
+  196  git push -u origin master
+  197  ls
+  198  mkdir SBH
+  199  ls
+  200  cd SBH/
+  201  git checkout -b UAT
+  202  vi UAT
+  203  git add -A
+  204  git commit -m "UAT"
+  205  git push origin UAT
+  206  git chckout -b SIT
+  207  git checkout -b SIT
+  208  vi SIT
+  209  gia add -A
+  210  git commit -m "SIT"
+  211  git push origin SIT
+  212  ls
+  213  cd SIT
+  214  cd SIT
+  215  ls
+  216  cd UAT
+  217  ls
+  218  git checkout master
+  219  ls
+  220  cd SIT
+  221  git checkout SBH
+  222  ls
+  223  echo "# git1" >> README.md
+  224  git init
+  225  git add README.md
+  226  git commit -m "first commit"
+  227  git remote add origin https://github.com/rajnikanthchinna/git1.git
+  228  git push -u origin master
+  229  git push -u origin master
+  230  echo "# git2" >> README.md
+  231  git init
+  232  git add README.md
+  233  git commit -m "first commit"
+  234  git remote add origin https://github.com/rajnikanthchinna/git2.git
+  235  git push -u origin master
+  236  mkdir SBH
+  237  ls
+  238  cd SBH/
+  239  vi master
+  240  git add -A
+  241  git commit -m "master"
+  242  git push
+  243  ls
+  244  cd master
+  245  cd master
+  246  ls
+  247  ls
+  248  cd master
+  249  ls
+  250  git checkout -b "UAT"
+  251  vi UAT
+  252  git add -a
+  253  git add -A
+  254  git commit -m "UAT"
+  255  git pus origin UAT
+  256  git push origin UAT
+  257  git checkout -b "SIT"
+  258  vi SIT
+  259  git add -A
+  260  git commit -m "SIT"
+  261  git push origin SIT
+  262  git checkout -b sprint1
+  263  vi sprint1
+  264  git add -A
+  265  git commit -m "sprint1"
+  266  git push origin sprint1
+  267  git checkout SIT
+  268  git checkout -b "sprint2"
+  269  vi sprint2
+  270  git add -A
+  271  git commit -m "sprint2"
+  272  git push origin sprint2
+  273  ls
+  274  git checkour master
+  275  ls
+  276  git checkout master
+  277  ls
+  278  cd master
+  279  git checkout SIT
+  280  git merge sprint 1
+  281  git merge sprint1
+  282  git merge sprint2
+  283  ls
+  284  git checkout UAT
+  285  git merge SIT
+  286  ls
+  287  cd sprint1
+  288  ls
+  289  git add -A
+  290  git commit -m "UAT"
+  291  tree
+  292  git push origin UAT
+  293  git checkout sir
+  294  git checkout SIT
+  295  ls
+  296  git checkout master
+  297  ls
+  298  git merge UAT
+  299  git push origin UAT
+  300  git branches
+  301  git branch
+  302  git tag SBH_R_V2.0
+  303  git tag
+  304  git checkout SBH__RV@.0
+  305  git checkout SBH__R_V2.0
+  306  git checkout SBH_R_V2.0
+  307  git push origin SBH_R_V2.0
+  308  git cat-file -t 70459cdfeab9510e46a8fdf12231700448d7d2f4
+  309  git cat-file -t 70459cdfeab9510e46a8fdf12231700448d7d2f4
+  310  git cat-file -s 70459cdfeab9510e46a8fdf12231700448d7d2f4
+  311  git cat-file -p 70459cdfeab9510e46a8fdf12231700448d7d2f4
+  312  git cat-file -t 70459cdfeab9510e46a8fdf12231700448d7d2f4
+  313  git cat-file -t 45176b2faf9a76ec9ad6e4e3db42c938017a3177
+  314  ssh -i "ansible.pem" ubuntu@ec2-52-221-178-206.ap-southeast-1.compute.ama                                                                                        zonaws.com
+  315  yes
+  316  ssh -i "ansible.pem" ubuntu@ec2-52-221-178-206.ap-southeast-1.compute.ama                                                                                        zonaws.com
+  317  echo "# git3" >> README.md
+  318  git init
+  319  git add README.md
+  320  git commit -m "first commit"
+  321  git remote add origin https://github.com/rajnikanthchinna/git3.git
+  322  git push -u origin master
+  323  mkdir SBH
+  324  vi master
+  325  git add -a
+  326  git add -A
+  327  git add commit -m "master"
+  328  git commit -m "master"
+  329  git push
+  330  git checkout -b UAT
+  331  vi UAT
+  332  git add -A
+  333  git commit -m "UAT"
+  334  git push origin UAT
+  335  git checkout -b SIT
+  336  vi SIT
+  337  git add -A
+  338  git commit -m "SIT"
+  339  git push origin SIT
+  340  git checkout sprint1
+  341  git checkout -b sprint1
+  342  vi sprint1
+  343  git add -A
+  344  git commit -m "sprint1"
+  345  git push origin sprint1
+  346  git checkout SIT
+  347  ls
+  348  cd SIT
+  349  ls
+  350  git checkout -b sprint2
+  351  vi sprint2
+  352  git add -A
+  353  git commit -m "sprint2"
+  354  git push origin sprint2
+  355  git merge sprint1
+  356  ls
+  357  git checkout SIT
+  358  git merge sprint1
+  359  git checkout sprint2
+  360  git checkout SIT
+  361  git merge sprint2
+  362  ls
+  363  git checkout UAT
+  364  gls
+  365  ls
+  366  git merge SIT
+  367  ;s
+  368  ls
+  369  git checkout master
+  370  ls
+  371  git merge UAT
+  372  ls
+  373  git tag SBH2V2.0
+  374  git tag
+  375  git checkout SBHV2.0
+  376  git checkout SBH2V2.0
+  377  git push origin SBH@V2.0
+  378  git push origin SBH2V2.0
+  379  ls
+  380  git checkout SIT
+  381  git checkout -b sprint4
+  382  vi sprint4
+  383  git add -A
+  384  git commit -m "sprint4"
+  385  ls
+  386  git checkout SIT
+  387  git merge sprint4
+  388  git push origin sprint4
+  389  ls
+  390  git log
+  391  vi mytask
+  392  git add -A
+  393  git commit -m "mytask"
+  394  vi mytask
+  395  git add -A
+  396  git stash
+  397  git stash list
+  398  vi mytask
+  399  git add -A
+  400  git commit -m "mytask"
+  401  git stash apply
+  402  vi mytask
+  403  ls
+  404  git checkout UAT
+  405  ls
+  406  git commit -m "mytask"
+  407  vi mytask
+  408  git add -A
+  409  git commit -m "mytask"
+  410  ls
+  411  git checkout UAT
+  412  ls
+  413  git checkout SIT
+  414  git log
+  415  git checkout UAT
+  416  git cherry-pick "00e43ef594e888b6fe285a947cef5e17acb29e68"
+  417  git checkout SIT
+  418  git add -A
+  419  git commit -m "mytask"
+  420  ls
+  421  git checkout SIT
+  422  ls
+  423  git log
+  424  git checkout -b sprint5
+  425  vi sprint5
+  426  git add -A
+  427  git commit -m "sprint5"
+  428  git checkout SIT
+  429  vi kiran
+  430  git add -a
+  431  git add -A
+  432  git commit -m "kiran"
+  433  vi kiran1
+  434  git add -A
+  435  git commit -m "kiran1"
+  436  ls
+  437  git checkout sprint5
+  438  git rebase SIT
+  439  ls
+  440  git log
+  441  git checkout UAT
+  442  ls
+  443  git rebase SIT
+  444  ls
+  445  git checkout master
+  446  git add -A
+  447  git commit -m "jsdklf"
+  448  git checkout master
+  449  git push UAT
+  450  git push origin  UAT
+  451  git checkout master
+  452  echo "# gitnew" >> README.md
+  453  git init
+  454  git add README.md
+  455  git commit -m "first commit"
+  456  git remote add origin https://github.com/rajnikanthchinna/gitnew.git
+  457  git push -u origin master
+  458  mkdir SBH
+  459  vi master
+  460  git add -A
+  461  git commit -m "master"
+  462  git push
+  463  git checkout UAT
+  464  git checkout -b UAT
+  465  vi UAT
+  466  git add -A
+  467  git commit -m "UAT"
+  468  git pus origin UAT
+  469  git push origin UAT
+  470  git checkout -b SIT
+  471  vi SIT
+  472  git add -A
+  473  git commit -m "SIT"
+  474  git push origin SIT
+  475  git checkout sprint1
+  476  git checkout -b sprint1
+  477  vi sprint1
+  478  git add -A
+  479  git commit -m "sprint1"
+  480  git push origin sprint1
+  481  git checkout -b sprint2
+  482  vi sprint2
+  483  git add -A
+  484  git commit -m "sprint2"
+  485  git push origin sprint2
+  486  ls
+  487  git branch
+  488  git checkout  SIT
+  489  ls
+  490  git statas
+  491  git status
+  492  ls
+  493  vi com1
+  494  git add -A
+  495  git commit -m " com one"
+  496  git status
+  497  git add -A
+  498  git checkout
+  499  git checkout  UAT
+  500  vi com1
+  501  echo "# mygit" >> README.md
+  502  git init
+  503  git add README.md
+  504  git commit -m "first commit"
+  505  git remote add origin https://github.com/rajnikanthchinna/mygit.git
+  506  git push -u origin master
+  507  git checkout -b B
+  508  vi b
+  509  git add -A
+  510  git commit -m " in B branch "
+  511  git checkout master
+  512  ls
+  513  vi mas1
+  514  git add -A
+  515  git commit -m " first commit of master"
+  516  vi mas2
+  517  git add -A
+  518  git commit -m " 2nd commit of master"
+  519  git log
+  520  git checkout  B
+  521  git log
+  522  git rebase master
+  523  git log
+  524  git log
+  525  history
+
+Chetan@DESKTOP-QO99CVR MINGW64 ~/Desktop/mygit (B)
+$

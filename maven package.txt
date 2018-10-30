@@ -1,0 +1,128 @@
+499  git clone https://github.com/maha4iac/SKRLogin.git
+  500  mvn compile
+  501  cd SKRlogin
+  502  ls
+  503  mvn compile
+  504  mvn test
+  505  mvn package
+  506  mvn install
+  507  history
+
+
+www.virtusoftsol.com Chennai  2001 Reg 
+
+1} Full Name  ( as per Degree certificate or PAN):Mr/Mrs/Ms. : KHANAPURAM RAJANIKANTH
+2}FATHER NAME : KHANAPURAM BHIKSHAPATHI
+3}Gender, Male/Female : MALE
+4} DOB : 15-05-1991
+5} PAN Number : DDTPK6480D
+6} Bank Account Details : 
+(A/c No. & Bank Name)  : 
+7}PERMANENT ADDRESS : 3-45 YENKAPALLY MOINABAD RANGA REDDY DIST HYDERABAD 500075
+8} Offer Date :
+9} Joining Date :
+10} Offer Designation :
+11: Present Designation: DEVOPS ENGINEER
+12} Joining CTC : 
+13} Current CTC : 5.20
+14}Resignation Date  (If applicable) : 
+15}Relieving Date (If applicable)      :
+16} Required Consultancy Name :
+17} Permanent Mobile No: 9866215679
+18}Permanent  Mail ID: rajnikanthdevops405@gmail.com
+19}Reference/Alternate Number:8639835362
+20}Reference/Alternate Mail ID : rajnikanthchinna12@gmail.com
+
+
+
+On Sun, 28 Oct 2018 at 19:35, Rajnikanth Chinna <rajnikanthchinna12@gmail.com> wrote:
+Thanks for the mail. 
+
+On Sat, 27 Oct 2018 at 13:15, manju bng <manjuoffice1234@gmail.com> wrote:
+
+
+Please fill this form 
+1} Full Name  ( as per Degree certificate or PAN):Mr/Mrs/Ms. : 
+2}FATHER NAME :
+3}Gender, Male/Female :
+4} DOB :
+5} PAN Number :
+6} Bank Account Details :
+(A/c No. & Bank Name)  :
+7}PERMANENT ADDRESS : 
+8} Offer Date :
+9} Joining Date :
+10} Offer Designation :
+11: Present Designation:
+12} Joining CTC : 
+13} Current CTC :
+14}Resignation Date  (If applicable) : 
+15}Relieving Date (If applicable)      :
+16} Required Consultancy Name :
+17} Permanent Mobile No:
+18}Permanent  Mail ID:
+19}Reference/Alternate Number:
+20}Reference/Alternate Mail ID :
+
+we will support from Genuine Software Companies 
+
+
+
+www.simpsysittech.com 
+www.fostonesoftware.comHyd&Chandigarh 2009 Reg
+
+www.vommatechnologies.comHYD&Mum 2009 Reg
+
+Keystone Unique Info Pvt Ltd.
+www.keystoinfo.com
+Hyderabad
+
+Mojoy Technologies Pvt Ltd
+www.mojoy.in ( www.mojoeinfo.com)
+Bangalore 
+
+Old domain &
+Located in Techpark with signage
+
+www.entec.co Mumbai Reg 2000 Reg 
+
+www.virtusoftsol.com Chennai  2001 Reg 
+
+www.ridgesofttech.com HYD 2000 Reg 
+
+www.tenetsoftware.com Bang 2002 Reg 
+
+www.profosoft.com Hyd 2003 reg
+
+
+www.stratabizinfotech.com Hyd 2014 Reg 
+www.diligenttechinc.com Bangalore 2010 Reg 
+
+www.ritetechsol.com Chennai 2002 Reg 
+
+www.unipoint.in Hyd 2010 Reg 
+
+www.tarants.com Bangalore 2010 Reg 
+
+www.ubiqtastech.com Pune 2008 Reg 
+
+
+
+
+Note : Institute Name and Location(Where u have done your Technology course):
+Phone Number and mail ID of the concern person:Send your updated resume along with the form.
+
+Please refer ur friends too.Contact me on:8123408777, 08971546907.  Reach me on my
+
+ mail id:manjuoffice1234@gmail.com  
+
+
+
+
+
+
+
+
+
+
+

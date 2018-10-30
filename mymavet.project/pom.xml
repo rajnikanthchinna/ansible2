@@ -1,0 +1,14 @@
+<project>
+<! --project name -->
+<artifactId> hello-world </artifactId>
+<! --organization -->
+<groupId> org.skr </groupId>
+<! --version of pom.xml -->
+<modelversion>4.0.0</modelversion>
+<! --vesion of artifact/component -->
+<version>1.0-snapchat</version>
+<! --packaging jar/war -->
+<packaging> jar </packaging>
+</project>
+
+
